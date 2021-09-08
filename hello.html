@@ -1,0 +1,573 @@
+<!-- Type de document -->
+<!DOCTYPE html>
+
+<html>
+<!-- Informations pour le navigateur -->
+    <head>
+        <meta charset="utf-8" />
+        <!-- Titre de la page -->
+        <title>HELLO WORLD</title>
+    </head>
+<!-- Corps de la page -->
+    <body>
+
+<h1 id="titreprincipal">Cours HTML et CSS sur OpenClassrooms</h1>
+
+<figure>
+    <img src="https://media2.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp?cid=ecf05e47be77efxvypu5lsvip6umo7n34tndo2psnph9lfko&rid=giphy.webp&ct=g" alt="chat qui apprend à coder" title="Moi quand j'apprends les langages HTML et CSS"/>
+    <figcaption> Moi quand j'apprends les langages html et css</figcaption>
+</figure>
+
+<h2>Structure du fichier:</h2>
+<ul>
+  <li><a href="#structure">Structure d'une page web</a></li>
+  <li><a href="#balises">Les différentes balises</a></li>
+  <li><a href="#importance">Dire qu'un élément est important</a></li>
+  <li><a href="#liens">Les liens</a></li>
+  <li><a href="#listes">Les listes</a></li>
+  <li><a href="#conseils">Conseils en vrac</a></li>
+</ul>
+
+<h2 id="structure">Structure de base d'une page HTML</h2>
+<ul>
+  <li>DOCTYPE</li> : indispensable car c'est elle qui indique qu'il s'agit d'une page html
+  <li>html</li> : balise principale qui englobe tout le code
+  <li>head</li> : informations générales pour l'ordinateur (titre, encodage...)
+  <li>meta charset utf8</li> : indique comment les caractères spéciaux vont s'afficher. BIen veiller à enregister le fichier en UTF8
+  <li>Titre</li> : le titre de la page
+  <li>body</li> : contenu principal
+  <li>en écrivant html dans Atom et en cliquant sur entrée, il nous génère un template</li>
+</ul>
+
+<h2 id="balises">Les différentes balises</h2>
+<ul>
+  <li>p, balise par paire, permet de délimiter les paragraphes</li>
+  <li>On utilise la balise orpheline br pour aller à la ligne</li>
+  <li>Pour faire un saut de plusieurs lignes, on utilisera le CSS plutôt
+    que de mettre plusieurs br à la suite</li>
+  <li>On utilisera les balises de h1 à h6 pour les différents niveaux de titre</li>
+  <li>Il faut toujours respecter l'arborescence des titres : pas de titres secondaires
+  sans un titre principal</li>
+  <li>On pourra modifier l'apparence des titres avec le CSS</li>
+</ul>
+<h3 id="importance">Indiquer qu'un élément est important</h3>
+  <ul>
+    <li>On utilise em pour mettre UN PEU en valeur : par défaut il met en italique</li>
+    <li>On utilise STRONG pour mettre beaucoup en valeur : par défaut il met en gras</li>
+    <li>mark permet de faire ressortir visuellement une portion de texte : par defaut il surligne</li>
+  </ul>
+<h3 id="listes">Créer des listes</h3>
+<ul>
+  <li>ul permet de créer des listes non ordonnées et à l'intérieur on mettra li pour chaque item</li>
+  <li>pour imbriquer une liste dans une autre liste, on réutilise un ul à l'intérieur d'un li</li>
+  <li>On utilisera <strong>ol</strong> pour une liste ordonnée et on gardera <strong>li</strong> pour les différents items</li>
+  <li>On peut aussi utiliser <strong>dl, dt et dd</strong> pour les listes de définition</li>
+</ul>
+
+<h3 id="liens">les liens</h3>
+<ul>
+  <li>pour insérer des liens, on utilisera <strong>a avec href="l'adresse du site"</strong></li>
+  <li>si on écrit un lien vers une adresse qui a des caractères bizarres, il faudra remplacer les & par des &amp</li>
+  <li>si on veut appeler un fichier html du même répertoire, il suffit de mettre le nom.html</li>
+  <li>si le fichier est placé dans un autre dossier, alors il faut mettre le nom du dossier avant avec /</li>
+  <li>si le fichier est dans un dossier parent, on ajoute ..</li>
+  <li>Pour rediriger vers une autre partie du site, on placera un id dans la balise vers laquelle rediriger puis on mettra #id de la balise dans le lien en question</li>
+  <li>l'attribut <strong>id</strong> sert à donner un nom unique à une balise, pour s'en servir de repère, il est utile pour repérer une balise en css</li>
+  <li>On peut combiner la redirection vers une autre page et une autre région de la page avec id et #</li>
+  <li>on utilisera title pour fournir une aide lorsqu'on survole un lien</li>
+  <li>On utilisera target="_blank" pour forcer l'ouverture dans un nouvel onglet</li>
+  <li>on utilisera href=mailto:votrenom@bidule.com pour créer un lien qui envoie un email</li>
+  <li>pour télécharger un fichier (zip par exemple) on inclue simplement le nom du fichier</li>
+</ul>
+
+    </body>
+
+<h2>Insérer des images</h2>
+<ul>
+    <li>Pour insérer des images, on utilise la balise orpheline &lt/img src="le chemin où se trouve l'image" alt="le texte qui va remplacer l'image si elle ne s'affiche pas"> </li>
+    <li>Ne pas oublier de mettre les images à l'intérieur d'un paragraphe</li>
+    <li>ne pas mettre d'espaces dans le nom de l'image au risque qu'il soit mal lu</li>
+    <li>on peut ajouter une infobulle avec la balise title</li>
+    <li>On peut afficher l'image en plus petite et l'entourer par un lien qui en cliquant redirigera vers l'image plus grande</li>
+    <li>On peut aussi entourer une image de figure pour l'integrer dedans</li>
+    <li>si on choisit de mettre l'image dans figure on peut aussi ajouter une figcaption en tant que legende</li>
+    <li>si on place l'image dans une figure, elle peut être située à l'extérieur d'un paragraphe</li>
+    <li>Si l'image apporte une information, il faut la placer dans une figure</li>
+    <li>si l'image n'apporte aucune information, il faut la placer dans le paragraphe</li>
+    <li>la balise figure indique à l'ordinateur que l'image a un sens et qu'elle permet de mieux comprendre le texte</li>
+</ul>
+
+<h2>les figures</h2>
+<ul>
+    <li>tout ce qui vient entourer le texte est une figure : images, codes sources, citations... </li>
+</ul>
+
+<!-- un commentaire -->
+
+<h2 id="conseils">Conseils généraux</h2>
+
+<ul>
+  <li>Toujours vérifier que le site est vu correctement sur tous les navigateurs</li>
+  <li>Le célèbre site caniuse.com tient à jour une liste des fonctionnalités
+  prises en charge par les différentes versions de chaque navigateur (figure suivante).</li>
+  <li>les balises orphelines servent à insérer quelque chose.
+  En général on met un / à la fin d'une balise orpheline</li>
+  <li>Les attributs viennent compléter les balises par des valeurs.</li>
+  <li>on peut par exemple indiquer le nom du fichier image.jpg</li>
+  <li>balise attribut="valeur" /balise</li>
+  <li>les balises ouvrantes et fermantes servent à délimiter quelque chose</li>
+  <li>Ils viennent après le nom de la première balise ouvrante</li>
+  <li>On distingue les balises en paires et les balises orphelines</li>
+
+</ul>
+<p></p>
+
+<h2>Le CSS</h2>
+<ul>
+    <li>Le CSS signifie Cascasing Style Sheet</li>
+    <li>Police, taille du texte, bordures, fond... </li>
+    <li>Il permet aussi de faire la mise en page du site</li>
+    <li>On peut écrire du code css de trois façons différentes</li>
+    <li>
+        <ul>
+            <li>Dans l'en-tiete head</li>
+            <li>dans un fichier css séparé</li>
+            <li>dans les balises elles-même avec l'attribut style</li>
+            <li>Pour indiquer qu'il y a un fichier css il faut l'indiquer avec &ltlink rel="stylesheet" href="style.css" /></li>
+            <li>Pour mettre le code css dans l'en-tete il faut mettre une balise style</li>
+            <li>On peut aussi directement mettre le code dans les balises avec l'attribut style</li>
+            <li>le langage css se compose de plusieurs parties :</li>
+            <ul>
+                <li>le nom des balises : par exemple p, h1...</li>
+                <li>l'attribut: par exemple color, font-size...</li>
+                <li>les valeurs: pour chaque propriété, on peut indiquer une valeur</li>
+                <li>On peut mettre autant de propriétés, ou attributs que l'on veut à l'intérieur des accolades</li>
+                <li>Chaque propriété est suivie des deux points, puis de la valeur et des points virgule. </li>
+                <li>Pour définir une couleur avec un code hexadecimal on doit mettre un diese avant</li>
+                <li>Pour appeler une classe on doit mettre un point en css</li>
+                <li>Pour déclarer une classe dans le html il faut mettre class="nom de la classe"</li>
+                <li>Si on veut appliquer un code à plusieurs balises, il faut les séparer d'une virgule</li>
+                <li>Les commentaires dans le css se passent de la meme facon que dans le html</li>
+                <li>On peut utiliser soit class= soit id=</li>
+                <li>Pour la classe on l'identifiera par un point dans le css, et pour l'id par un #</li>
+                <li>Pour identifier une balise et rester au sein de la même ligne on utilisera span</li>
+                <li>Pour identifier une balise mais sauter une ligne on utilisera div</li>
+                <li>Pour sélectionner des éléments de la page à modifier, on utilise des sélecteurs</li>
+                <li>le selecteur universel est *</li>
+                <li>Pour sélectionner toutes les balises à l'intérieur d'une autre on ne les sépare pas par une virgule</li>
+                <li>Pour changer une police on utilise font-family</li>
+                <li>balise + balise : désigne la balise qui suit immédiatement la première</li>
+                <li>balise[attribut] sélectionne toutes les balises qui possèdent l'attribut en question, par exemple title</li>
+                <li>balise[attribut*=valeur] l'attribut doit posséder la valeur en question, peu importe sa position<li>
+
+            </ul>
+        </ul>
+</ul>
+    <h2>Le formatage de texte en CSS</h2>
+    <ul>
+        <li>Pour indiquer une taille de texte on utilise font-size</li>
+        <li>La taille indiquée peut être relative (em, ex) ou absolue</li>
+        <li>On peut aussi l'indiquer avec une taille relative: xx-small, x-small, small, medium, large, x-large, xx-large</li>
+        <li>Si on indique avec des em, 1 est la taille normale, au-dessus de 1 on agrandit et en-dessous de 1 on rétrécit</li>
+        <li>Pour modifier la police on utilise font-family</li>
+        <li>Pour les polices, si on en metplusieurs séparées par des virgules, le navigateur essaiera chacune d'entre elles les unes après les autres.</li>
+        <li>En général, on indique Sérif en tout dernier qui correspond à une police par défaut</li>
+        <li>Les polices qui fonctionnent bien dans la plupart des navigateurs sont :
+            <ul>
+                <li>Arial</li>
+                <li>Arial Blacj</li>
+                <li>Comic Sans MS</li>
+                <li>Courrier Nez</li>
+                <li>Georgia</li>
+                <li>Impact</li>
+                <li>Trebuchet MS</li>
+                <li>Verdana</li>
+                <li>Times New Roman</li>
+            </ul>
+        </li>
+        <li>Si la police contient des espaces il faut entourer le nom de la police de guillemets</li>
+        <li>Si on utilise @font-face, on peut intégrer une police téléchargée (l'utilisateur devra alors la télécharger sur son navigateur pour qu'elle fonctionne)</li>
+        <li>Il faut la déclarer avec font face puis à l'intérieur font-family et src: url('mapolice.eot')</li>
+        <li>Les différents formats: tts, eot, otf, svg, woff</li>
+        <li>Pour mettre en italique, il y a plusieurs valeurs : italique, oblique ou normal</li>
+        <li>Pour mettre en gras : font-weight avec bold ou normal</li>
+        <li>Pour souligner, barrer etc. on utilise text-decoration : underline, line-through, overline, none</li>
+        <li>on utilise text-align pour aligner le texte : left, center, right, justified...</li>
+        <li>on ne peut modifier l'alignement uniquement avec les balises de type block</li>
+        <li>On peut utiliser float pour faire flotter une image ou une figure autour d'autres balises</li>
+        <li>On utilise clear au niveau d'une autre balise pour indiquer qu'on arrête de faire flotter le texte autour</li>
+    </ul>
+
+<h2>La couleur en CSS</h2>
+<ul>
+    <li>Pour indiquer la couleur, on utiliser color</li>
+    <li>elle peut alors etre indiquee avec un nom de couleur générique</li>
+    <li>Pour utiliser la notation hexadecimale il faut précéder la notation d'un diese</li>
+    <li>Pur indiquer la couleur de fond, on utilise la propriété background-color</li>
+    <li>en css, si on applique un style à une balise, toutes les balises à l'intérieur héritent de cette dernière (c'est l'héritage)</li>
+    <li>mark permet à la base de mettre certains mots en valeur</li>
+    <li>On peut appliquer background color à des endroits particuliers de la page comme certains paragraphes ou même des mots</li>
+    <li>c'est la propriété de l'élément le plus précis qui a la priorité</li>
+    <li>la propriété qui permet de changer une image de fond est background-image: url('le nom de l'image placée dans le même dossier)</li>
+    <li>l'adresse considérée : l'image doit être dans le même dossier que le fichier css</li>
+    <li>background-attachment permet de soit fixer le fond (fixed) soit permettre au texte de scroller par dessus (scroll)</li>
+    <li>par défaut l'image de fond se répète en mosaique, mais on peut changer ça</li>
+    <li>
+        <ul>
+            <li>no-repeat : le fond ne se répète pas</li>
+            <li>repeat-x: le fond se répète horizontalement</li>
+            <li>repeat-y : le fond se répète verticalement</li>
+            <li>repeat: le fond se répète dans une mosaique</li>
+        </ul>
+    </li>
+    <li>Pour changer la position de l'image il faut indiquer background-position et le combiner avec nackground-repeat: no-repeat</li>
+    <li>background-position prend deux valeurs en pixels : la distance par rapport à la marge de gauche et par rapport à la marge du haut</li>
+    <li>On peut aussi utiliser les valeurs top, bottom, center, left, right</li>
+    <li>On peut combiner toutes les propriétés que l'on a assignées dans une super propriété qui est background avec toutes les propriétés sans virgule</li>
+    <li>L'ordre des valeurs n'a alors pas d'importance</li>
+    <li>On peut redimensionner les images avec height et width</li>
+    <li>ne pas oublier float et ensuite clear après le float</li>
+    <li>le css permet de jouer sur la transparence en utilisant opacity : on utilise des valeurs entre 0 (complètement transparent) et 1 (complètement opaque)</li>
+    <li>On peut aussi utiliser la notation rgba(r, g, b, a) avec a indiquant le niveau d'opacité</li>
+</ul>
+
+<h2>Appliquer des bordures et des ombres</h2>
+<ul>
+    <li>beaucoup de propriétés existent pour personnaliser les bordures: border-width, border-color, border-style...</li>
+    <li>on peut utiliser la superpropriété order et l'associer à 3 valeurs : color, width et style</li>
+    <li>La largeur s'indique avec une valeur en pixels</li>
+    <li>La couleur comme vu précédemment</li>
+    <li>le type de bordure, il y en a plusieurs</li>
+    <li>
+        <ul>
+            <li>none</li>
+            <li>solid : une bordure sous forme de trait continu</li>
+            <li>dashed : trait discontinu</li>
+            <li>dotted : des points</li>
+            <li>double : double bordure</li>
+            <li>groove : relief</li>
+            <li>ridge : autre effet relief</li>
+            <li>inset: effet 3d aui donne l'impression qu'on a cliqué dessus</li>
+            <li>outset : effet 3d global surrélevé</li>
+        </ul>
+    </li>
+    <li>Pour changer la bordure à différents endroits, on peut utiliser border-top, border-bottom, border-left, border-right</li>
+    <li>Pour arrondir la bordure on utilise border-radius avec une valeur associée</li>
+    <li>Pour préciser la valeur de l'arrondi dans chaque coin, il faut mettre 4 valeurs</li>
+    <li>On peut appliquer des ombres avec box-shadow</li>
+    <li>box-shadow prend plusieurs valeurs L le décalage horizontal de l'ombre, le décalage vertical, l'adoucissement du dégradé et la couleur</li>
+    <li>Pour que l'adoucissement soit élevé il faut mettre une valeur supérieure à celle du décalage</li>
+    <li>On peut aussi ajouter de l'ombre au texte directement avec text-shadow</li>
+    <li>On utilise a:hover pour changer l'apparence d'un lien lorqu'on le survole</li>
+    <li>avec hover on peut changer toutes les propriétés que l'on veut</li>
+    <li>On peut aussi changer l'apparence des paragraphes lorsque l'on clique dessus</li>
+    <li>active permet de changer l'apparence du lien uniquement lorsqu'on clique dessus</li>
+    <li>focus: sert lorsque l'élément est sélectionné. Sera utile lorsqu'on verra les formulaires</li>
+    <li>On peut changer l'apparence d'un lien déjà visité en utilisant a:visited. Si on veut qu'il garde une apparence normale, il faut lui mettre la meme apparence que par defaut</li>
+</ul>
+
+<h2>Mise en page de la page web</h2>
+<ul>
+    <li>en general, une page web contient un en-tête, une zone de navigation, un corps et un pied de page</li>
+    <li>header est l'en-tete du site : peut contenir un logo, une banière...</li>
+    <li>le header peut contenir tout ce qu'on veut : images, textes, liens...</li>
+    <li>on a aussi le footer dans lequel en général on retrouve les liens de contact et les informations sur la page</li>
+    <li>la balise nav permet de concentrer tous les liens de navigation au même endroit</li>
+    <li>La balise section permet de délimiter des sections sur le site</li>
+    <li>aside est utilisée pour noter des informations complémentaires sur le côté mais n'est pas obligatoire</li>
+    <li>article renvoie à une partie de la page qui pourrait être reprise sur une autre et qui est indépendante</li>
+</ul>
+
+<h2>Agencement avec des blocs</h2>
+<ul>
+    <li>on distingue les balises inline (a par exemple) et les balises blocs (p, h...)</li>
+    <li>Les balises de type block créent automatiquement un retour à la ligne, alors que les balises inline, non</li>
+    <li>Il est possible d'imbriquer des blocs dans les autres</li>
+    <li>les balises universelles, span et div permettent de leur appliquer une class ou une id quand aucune autre balise ne convient</li>
+    <li>On peut changer la taille des blocs en jouant sur height et width</li>
+    <li>Il vaut mieux changer la taille avec des pourcentages pour créer une taille qui s'adapte à la taille de l'écran.</li>
+    <li>On peut aussi créer des blocs qui ont une dimension précise en pixels</li>
+    <li>On peut demander à un bloc d'avoir des dimensions minimales et maximales afin que ça s'adapte aux écrans des visiteurs en général : min-width, min-height, max-width, max-height</li>
+    <li>Tous les blocs possèdent des marges et il existe deux types de marges: les marges intérieures et les marges extérieures</li>
+    <li>padding désigne la marge intérieure en pixels et margin la marge extérieure en pixels</li>
+    <li>margin et padding s'appliquent tous les deux aux quatre côtés</li>
+    <li>Si on veut que ça s'applique àun côté particulier il faut le préciser</li>
+    <li>Si on spécifie avec quatre valeurs, cela donne la premiere en haut, puis dans le sens des aiguilles d'une montre</li>
+    <li>Pour centrer un bloc, on utilise margin auto</li>
+    <li>Si on recadre un bloc mais que le texte est trop petit il peut depasser</li>
+    <li>On utilise alors la propriete overflow</li>
+
+    <li>avec overflow on peut controler le comportement du texte s'il depasse</li>
+    <li>visible : le texte depasse toujours et reste visible</li>
+    <li>hidden: le texte est coupé et on ne le voit plus</li>
+    <li>scroll et auto : permet d'avoir des barres de défilement</li>
+    <li>utiliser word wrap break-word permet de couper les longues lignes pour lesquelles l'ordi ne sait pas faire.</li>
+    <li>Utiliser cette fonctionnalité quand du texte est susceptible d'etre saisi par un utilisateur</li>
+</ul>
+
+<h2>Faire la mise en page avec flexbox</h2>
+<ul>
+    <li>Pour mettre en page un site internet on peut utiliser Flexbox</li>
+    <li>Flexbox est comme un conteneur dans lequel on place plusieurs éléments</li>
+    <li>Sur une même page web, on peut avoir plusieurs conteneurs</li>
+    <li>Si on met des conteneurs div les uns en-dessous des autres dans le code ils vont apparaitre tels quels sur la page</li>
+    <li>On peut appliquer flex dans le css sur le conteneur directement pour que les categories se placent cote à cote</li>
+    <li>Pour cela : display:flex</li>
+    <li>On peut agencer les éléments dans le sens que l'on veut en ajoutant flex-direction : row, column, row-reverse, column-reverse...</li>
+    <li>Si on veut que les liens visités se comportent comme les autres il faut juste traiter le a et pas le a:visited</li>
+    <li>Si on veut demander aux blocs de retourner à la ligne il faut indiquer flex-wrap</li>
+    <li>flex-wrap peut prendre plusieurs valeurs</li>
+    <li>no-wrap : les élément se serrent autant qu'ils peuvent</li>
+    <li>wrap : les éléments vont à la ligne</li>
+    <li>wrap-reverse : les éléments vont à la ligne mais leur ordre est inversé</li>
+    <li>Il y a deux axes avec flex : l'horizontal et le vertical</li>
+    <li>Si on organise les éléments hrizontalement, l'axe secondaire est le vertical et vice-versa</li>
+    <li>pour les aligner selon le second axe, on va utiliser justify-content</li>
+    <li>
+        <ul>
+            <li>flex-start : alignés au début</li>
+            <li>flex-end: alignés à la fin</li>
+            <li>center : alignés au centre</li>
+            <li>space-between : les éléments sont étirés sur tout l'axe</li>
+            <li>space-around : les éléments sont étirés sur tout l'axe, mais ils laissent de l'espace aux extrêmités</li>
+        </ul>
+    </li>
+    <li>Justify-content sert à aligner sur l'axe principal</li>
+    <li>Avec align-items on peut changer l'alignement sur le second axe.</li>
+    <ul>
+        <li>stretch étirés sur tout l'axe </li>
+        <li>flex-start : alignés au début</li>
+        <li>flex-end : alignés à la fin</li>
+        <li>center : alignés au centre</li>
+        <li>baseline : alignés sur la ligne de base : comme flex-start</li>
+    </ul>
+    <li>Pour aligner automatiquement des items dans un conteneur flex on déclare le conteneur en flex et ensuite la classe des éléments contenus à l'intérieur en margin auto</li>
+    <li>Pour faire une exception sur un élément en particulier on utilise element:nthchild(le numéro de l'élément)</li>
+    <li>avec align-content on peut aligner plusieurs lignes</li>
+    <li>pour le code associé c'est le meme que justify content</li>
+    <li>On peut changer l'ordre de chaque élément avec la propriété order</li>
+    <li>En indiquant flex: une valeur on indique à quel point un élément peut grossir par rapport aux autres</li>
+    <li>On utilisera margin auto pour centrer le bloc en quesrion</li>
+    <li>Ne pas oublier padding et margin qui peuvent être très utiles</li>
+    <li>apres avoir testé il semble que flex permette d'assigner un élément parent comme étant la boite principale et tous les éléments qui sont contenus dedans peuvent alors être alignés</li>
+</ul>
+
+<h2>Les anciennes méthodes pour agencer une page web</h2>
+
+<ul>
+    <li>Pour afficher des éléments côte à côte avec l'ancienne méthode (float) il faut assigner à l'autre élément une marge de largeur supérieure au premier élément</li>
+    <li>La propriété display permet de modifier le type d'un élément (en ligne, bloc...)</li>
+    <li>avec display on peut assigner inline, block, inline-block (permet de redimensionner l'élément) et none</li>
+    <li>On peut masquer des éléments avec none</li>
+    <li>les inline-block se positionnent les uns à côté des autres</li>
+    <li>On peut leur donner la dimension que l'on veut</li>
+    <li>les éléments inline-block par défaut vont se placer sur une même ligne de base, en bas</li>
+    <li>Pour changer l'alignement on va utiliser vertical-align : elle peut prendre les valeurs top, bottom, middle...</li>
+    <li>Inline-block permet de ne faire prendre à la section que la largeur que l'on veut qu'elle prenne</li>
+    <li>Pour changer la position d'un block on utilise position: fixed, relative et absolute</li>
+    <li>si on choisit absolute il faut préciser right, top, bottom, left... </li>
+    <li>Tous les éléments en position absolue finissent par-dessus les autres éléments</li>
+    <li>Si plusieurs éléments en position absolue se retrouvent au même endroit, il vont se chevaucher</li>
+    <li>Il faut alors utiliser z-index pour indiquer celui qui se retrouve par dessus (valeur de z-index la plus élevée)</li>
+    <li>position: relative : prend pour point de référence celui de base de l'élément</li>
+    <li>Pour afficher un pied de page toujours en bas meme pour une petite page : placer tous les éléments de la page dans un flex !!</li>
+    <li>Un élément placé en position relative à l'intérieur d'un autre élément se placera en relatif par rapport à cet autre élément</li>
+    <li>Si on passe par un graphiste ou une appli comme XD, il faut se demander quelles seront les couleurs utilisées, les images découpées et la police</li>
+    <li>Pour centrer une image dans un div il faut utiliser display : block puis margin auto</li>
+</ul>
+
+<h2>TP créer son site internet</h2>
+<ul>
+  <li>Dans un premier temps il faut créer la maquette du site en html</li>
+  <li>bien utiliser header section et nav quand c'est possible sinon div</li>
+    <li>Pour créer un site internet on peut s'inspirer du site HTML UP</li>
+    <li>il faut placer tout le contenu de la page dans une grande balise div qu'on appelle parfois un main ou un wrapper</li>
+    <li>On ne peut jamais obtenir un résultat identique à la maquette au pixel pres</li>
+    <li>Il faut procéder dans l'odre suivant :
+      <ul>
+        <li>Polices personnalisées</li>
+        <li>Style principal de la page (largeur du site, fond, couleur par défaut du texte)</li>
+        <li>En-tête et liens de navigation</li>
+        <li>Banière</li>
+        <li>Section principale du corps de page, au centre</li>
+        <li>Pied de page (footer)</li>
+      </ul>
+    </li>
+    <li>Polices personnalisées : On peut utiliser fontsquirrel pour générer des polices et les intégrer dans le css</li>
+    <li>Styles principaux : d'abord on dimensionne le conteneur principal de la page et on le centre avec les marges automatiques</li>
+    <li>Pour dimensionner la page et la centrer à l'écran on précise une largeur puis margin:auto;</li>
+    <li>Pour créer un design qui s'adapte aux dimensions de l'écran de l'utilisateur, on utilisera une largeur en pourcentage plutôt qu'en pixels</li>
+    <li>Pour transformer tout ce que l'on écrit en lettres majuscules on utilisera text-transform: uppercase</li>
+    <li>On positionne les éléments avec flexbox</li>
+    <li>Pour changer l'affichage d'une liste à puces, on utilisera list-style-type: none et display:flex</li>
+    <li>Pour positionner les blocs, se rappeler que les blocs absolus se placent dans les autres blocs absolus, relatifs ou fixes</li>
+    <li>Au lieu de galérer à afficher une image, on peut la mettre en image de fond d'un bloc div</li>
+    <li>Ne pas oublier qu'on peut mettre des balises section</li>
+    <li>Pour changer l'apparence des puces css on peut utiliser list-style-image</li>
+    <li>On peut utiliser le vlaidateur du W3C pour analyser le code source de sa page et voir s'il est correctement écrit</li>
+    <li>Tous les retours à la ligne doivent se trouver dans un paragraphe</li>
+    <li>Toutes les images doivent avoir un alt</li>
+    <li>les liens qui comportent des & doivent être remplacés par des &amp;</li>
+</ul>
+
+<ul>
+  <li>Ne pas oublier de mettre des bordures aux images</li>
+  <li>On peut aussi mettre des images de fond dans des div</li>
+  <li>Ne pas oublier qu'on peut aussi sélectionner des polices personnalisées avec font-face</li>
+  <li>Il y a aussi la commande align-vertical : top pour tout aligner sur la même ligne verticalement</li>
+  <li>On peut masquer le texte qui dépasse d'une balise div avec la propriété css hidden</li>
+  <li>Pour changer l'affichage d'une balise on utilise display: inline, block, inline-block...</li>
+  <li>Pour décaler un élément de sa position initiale on utilise position : relative</li>
+  <li>Pour tester la validité d'un code HTML on utilise w3.org</li>
+</ul>
+
+<h2>Les tableaux</h2>
+
+<ul>
+  <li>On utilise table pour délimiter le début et la fin d'un tableau</li>
+  <li>Il faut la placer en dehors de la balise de paragraphe</li>
+  <li>On utilise tr pour indiquer les nouvelles lignes et td pour indiquer les nouvelles cellules</li>
+  <li>Pour ajouter des bordures à ces cellules on va utiliser border solid 1px black par exemple</li>
+  <li>On utilisera border-collapse avec collapse pour que les cellules soient collées et separate pour que les cellules soient séparées</li>
+  <li>border-collapse s'applique à tout le tableau</li>
+  <li>La ligne d'en-tête est pareil que les autres sauf que les cellules sont encadrées par des th et non des td</li>
+  <li>Il faut préciser au css qu'il faut ajouter des bordures spécifiques pour ces cellules d'en-tête</li>
+  <li>On utilise caption pour indiquer le titre du tableau juste en-dessous de la balise table</li>
+  <li>Avec caption-side on peut choisir où s'affichent les légendes : en haut, en bas avec top ou bottom</li>
+  <li>Pour diviser un gros tableau, on utilise thead, tbody et tfoot</li>
+  <li>On utilisera l'attribut colspan ou rowspan après le td pour faire fusionner des cellules</li>
+  <li>On peut changer l'alignement vertical avec vertical-align</li>
+</ul>
+
+<h2>Créer des formulaires</h2>
+<ul>
+  <li>Traitement de données issues d'un formulaire : PHP</li>
+  <li>Créer un formulaire : balises form. </li>
+  <li>Il faut mettre un p dans le formulaire pour écrire du texte.</li>
+  <li>On utilise ensuite l'attribut method pour dire comment les données vont être envoyées</li>
+  <li>en général on utilise la méthode post : permet d'envoyer beaucoup d'infos et les données ne passent pas par la barre d'adresse</li>
+  <li>On utilise la méthode action pour choisir comment traiter les données : en PHP</li>
+  <li>On utilise une page en .php qui sera appelée lorsque l'utilisateur enverra le formulaire</li>
+  <li>Champs de texte : monoligne et multiligne</li>
+  <li>On utilise input</li>
+  <li>avec l'attribut type, on peut changer le type d'input</li>
+  <li>Il faut aussi identifier l'input avec un nom pour pouvoir savoir où récupérer les données</li>
+  <li>On utilise label pour indiquer à l'utilisateur ce qu'il doit écrire</li>
+  <li>Il faut lier le label à la zone de texte. Pour cela, on utilise id</li>
+  <li>label sert à identifier la variable du formulaire que l'élément concerne</li>
+  <li>id sert à identifier l'élément concerné</li>
+  <li>name : nom de la variable</li>
+  <li>id : identifiant de l'élément en html</li>
+  <li>Il faut ensuite lier le label au champ de texte en question avec l'attribut for</li>
+  <ul> Concernant la balise input :
+    <li>On peut agrandir le champ avec size</li>
+    <li>On peut limiter le nombre de caractères à saisir avec maxlength</li>
+    <li>On peut préremplir le champ avecvalue</li>
+    <li>On peut donner une indication sur le contenu avec placeholder</li>
+  </ul>
+  <li>On peut masquer les caractères rentrés avec type="password"</li>
+  <li>our utiliser une zone multiligne, on utilise textarea</li>
+  <li>Pour configurer la taille on peut le faire en CSS avec width et height, ou avec les attributs rows et cols de textarea</li>
+  <li>dans input on peut mettre email : zone de texte enrichie</li>
+  <li>Avec le champ url, on peut demander à saisir une adresse en absolu avec l'attribut type="url"</li>
+  <li>On peut aussi demander de mettre un téléphone avec l'attribut type="tel"</li>
+  <li>avec type="number" on peut rentrer des nombres avec les flèches</li>
+  <li>avec le type range on peut sélectionner un nombre avec un curseur : on utilisera les attributs min, max et step pour restreindre les valeurs disponibles</li>
+  <li>On peut aussi demander une couleur avec input type="color"</li>
+  <li>On peut aussi demander des dates et des heures</li>
+  <ul>
+    <li>date</li>
+    <li>time</li>
+    <li>week</li>
+    <li>month</li>
+    <li>datetime</li>
+    <li>datetime-local</li>
+  </ul>
+  <li>On peut aussi dire que c'est un champ de recherche avec type="search"</li>
+  <li>Pour créer une case à cocher, on utilise la balise input avec le type checkbox</li>
+  <li>On ajoute ensuite un label pour chaque checkbox pour y associer un libellé</li>
+  <li>Avec l'attribut checked, on peut mettre une case cochée par défaut</li>
+  <li>Pour les zones d'option, on va utiliser type="radio"</li>
+  <li>Pour ces zones d'option il faut répéter le même nom pour ne laisser qu'une option possible</li>
+  <li>On peut toujours mettre l'attribut checked pour sélectionner une valeur par défaut</li>
+  <li>Pour la liste déroulante on utilise select comme attribut.</li>
+  <li>On utilise le mot option à l'intérieur pour chaque option possible et on associe l'attribue value pour identifier ce qui a été choisi par l'utilisateur</li>
+  <li>Si on veut qu'une option soit sélectionnée par défaut il faut mettre l'attribut selected</li>
+  <li>On peut grouper les options avec optgroup</li>
+  <li>On peut regrouper les différentes parties du questionnaire avec fieldset et legend pour donner un titre au fieldset</li>
+  <li>En utilisant l'attribut autofocus, le formulaire mettra automatiquement le curseur à l'endroit indiqué</li>
+  <li>Pour rendre un champ obligatoire, on utilisera l'attribut required</li>
+  <li>En css, on pourra changer les pseudo-formats avec :</li>
+
+  <li>Pour envoyer les données on utilise le type="submit". On peut mettre img avec une source src pour remplacer le bouton par une image</li>
+  <li>type = "reset" : remise à 0 du formulaire</li>
+  <li>type = "button" : si on veut y associer du javascript</li>
+
+</ul>
+
+<h2>Audio et vidéo</h2>
+<ul>
+    <li>Plusieurs formats existent pour mettre de l'audio sur le site : mp3 (compressé, AAC (itunes), OGG (libre) et WAV (non compressé donc lourd))</li>
+    <li>Pour les formats vidéos on utilise</li>
+    <ul>
+        <li>Un format conteneur : boite qui sert à contenir les éléments</li>
+        <li>Un codec audio : format du son de la video</li>
+        <li>Un codec video : c'est le format qui compresse les images : h.264, Ogg Theora, WebM...</li>
+    </ul>
+    <li>Pour convertir une vidéo dans les différents formats, il faut utiliser Miro Video Converter</li>
+    <li>Pour ajouter un son sur notre page, on utilise audio src="l'adresse de l'audio"</li>
+    <li>On complète la balise avec les attributs controls, width, loop, autoplay, preload (auto, metadata, none)</li>
+    <li>Dans audio on peut afficher un message en particulier à l'intérieur de la balise</li>
+    <li>Si le navigateur ne gere pas un fichier en question, on peut creer plusieurs versions du fichier adio et le navigateur prendra automatiquement le format qu'il reconnait</li>
+    <li>On peut utiliser les mêmes attributs que pour l'audio à l'exception de l'attribut poster que l'on peut rajouter</li>
+    <li>L'attribut poster permet d'indiquer quelle image s'affichera lorsque la vidéo chargera</li>
+    <li>On ouvre et ferme juste après la balise video pour pouvoir ajouter un texte au milieu</li>
+    <li>Afin de contenter tous les navigateurs on peut utiliser source à l'intérieur de la balise video pour renseigner différents formats possibles</li>
+    <li>Il est recommandé d'afficher les formats .mp4 et en premier dans la liste</li>
+</ul>
+
+
+<h2>Responsive Design</h2>
+
+<ul>
+  <li>Le responsive design permet de paramétrer l'affichage d'un site en fonction des différentes résolutions d'écran</li>
+  <li>Les media queries sont des règles à appliquer pour changer le design en fonction des caractéristiques de l'écran</li>
+  <li>Grâce aux media queries, on peut changer l'affichage du site en fonction de plein de paramètres</li>
+  <li>Il y a deux façons d'écrire les règles css</li>
+  <ul>
+    <li>Soit dans le fichier html en demandant de charger un fichier css différent en fonction de la résolution</li>
+    <li>Soit dans le fichier css en disant si la réoslution est inférieure à tant alors charge les propriétés suivantes</li>
+    <li>Dans la balise link rel on ajoute media="screen and (max-width: 1280px)" href="petite_resolution.css"</li>
+    <li>On peut utiliser ce code pour charger des pages différentes en fonction des conditions</li>
+    <li>On peut aussi écrire la règle directement dans le fichier css avec la requête @media screen and (max-width: 1280px)</li>
+    <li>Voici les nombreuses règles qui existent pour faire un media query:</li>
+    <ul>
+      <li>color</li>
+      <li>height</li>
+      <li>width</li>
+      <li>device-height</li>
+      <li>device-width</li>
+      <li>orientation</li>
+      <li>media : screen, handheld, print, tv, projection, all</li>
+    </ul>
+    <li>On peut rajouter les préfixes min et max devant ces règles</li>
+    <li>On peut combiner les règles avec les mots not, and et only</li>
+    <li>les pages par défaut ont une largeur fixée à auto et les blocs prennent toute la largeur de la page</li>
+    <li>Pour masquer un élément, on se souvient que l'on peut utiliser display: none</li>
+    <li>aside p : tous les éléments p à l'intérieur de aside</li>
+    <li>last child signifie le dernier élément</li>
+    <ul> Largeurs des viewport par défaut :
+      <li>Opéra : 850 pixels</li>
+      <li>Safari 980 pixels</li>
+      <li>Android : 800 pixels</li>
+      <li>windows phone 1024 pixels</li>
+      <li>max-device width permet de ne viser que les appareils mobiles avec 480px.</li>
+    </ul>
+    <li>Pour modifier la largeur du viewport du navigateur mobile, on peut insérer une balise meta dans l'en-tête head : meta name="viewport" content="width=320"</li>
+    <li>Pour modifier la largeur du viewport du navigateur mobile, on peut insérer une balise meta dans l'en-tête head : meta name="viewport" content="width=device-width" pour éviter d'avoir un zoom</li>
+  </ul>
+</ul>
+
+<p><a href="#titreprincipal">back to top</a></p>
+
+</html>

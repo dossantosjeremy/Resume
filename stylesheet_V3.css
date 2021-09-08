@@ -1,0 +1,682 @@
+@media all and (max-width: 1280px)
+{
+
+
+  .flexwrapper
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+  footer
+  {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:auto;
+    width: 6%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  footer a
+  {
+    color: white;
+  }
+
+  footer a:hover
+  {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  @font-face {
+      font-family: 'alex_brushregular';
+      src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+           url('alexbrush-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+
+  body
+  {
+
+      background-color: grey;
+      /* background-image: url("https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"); */
+  }
+
+  h1
+  {
+    font-family: 'alex_brushregular';
+  }
+
+
+  h1, h2
+  {
+      text-align: center;
+      color: white;
+  }
+
+
+  #photo_cv
+  {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    width: 25%;
+  }
+
+  nav
+  {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: rgba(1,1,1, 0.5);
+      padding: 5px;
+
+  }
+
+  .nom_poste
+  {
+    background-color: rgba(1,1,1, 0.5);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+
+  .linear-gradient span {
+    background: linear-gradient(to bottom, blue, grey);
+  }
+
+  #subtitle span
+  {
+
+      font-weight: normal;
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+  }
+
+
+
+  .element
+  {
+
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0);
+      border: white 1px solid;
+      font-size: large;
+      height: auto;
+      padding: 10px;
+  }
+
+
+  a
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  a:hover
+  {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+  }
+
+  /* a:visited
+  {
+      color:black;
+      text-decoration: none;
+  } */
+
+  a:active
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  .mainwrapper
+  {
+    width: 80%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .formulairecontact
+  {
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    bottom: 50px;
+    width: 50%;
+    text-align: center;
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+}
+
+
+@media screen and (max-width: 1920px) and (min-width: 1280px)
+
+{
+  .flexwrapper
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+  footer
+  {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  footer a
+  {
+    color: white;
+  }
+
+  footer a:hover
+  {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  @font-face {
+      font-family: 'alex_brushregular';
+      src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+           url('alexbrush-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+
+  body
+  {
+
+      background-color: grey;
+
+      /* background-image: url("https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"); */
+  }
+
+  h1
+  {
+    font-family: 'alex_brushregular';
+  }
+
+
+  h1, h2
+  {
+      text-align: center;
+      color: white;
+  }
+
+
+  #photo_cv
+  {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    width: 25%;
+  }
+
+  nav
+  {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: rgba(1,1,1, 0.5);
+      padding: 5px;
+
+  }
+
+  .nom_poste
+  {
+    background-color: rgba(1,1,1, 0.5);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+
+  .linear-gradient span {
+    background: linear-gradient(to bottom, blue, grey);
+  }
+
+  #subtitle span
+  {
+
+      font-weight: normal;
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+  }
+
+
+
+  .element
+  {
+
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0);
+      border: white 1px solid;
+      font-size: large;
+      height: auto;
+      padding: 10px;
+  }
+
+
+  a
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  a:hover
+  {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+  }
+
+  /* a:visited
+  {
+      color:black;
+      text-decoration: none;
+  } */
+
+  a:active
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  .mainwrapper
+  {
+    width: 60%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .formulairecontact
+  {
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    bottom: 50px;
+    width: 50%;
+    text-align: center;
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1280px)
+{
+
+
+  .flexwrapper
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+  footer
+  {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  footer a
+  {
+    color: white;
+  }
+
+  footer a:hover
+  {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  @font-face {
+      font-family: 'alex_brushregular';
+      src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+           url('alexbrush-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+
+  body
+  {
+      background-color: grey;
+      /* background-image: url("https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"); */
+  }
+
+  h1
+  {
+    font-family: 'alex_brushregular';
+  }
+
+
+  h1, h2
+  {
+      text-align: center;
+      color: white;
+  }
+
+
+  #photo_cv
+  {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    width: 25%;
+  }
+
+  nav
+  {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: rgba(1,1,1, 0.5);
+      padding: 5px;
+
+  }
+
+  .nom_poste
+  {
+    background-color: rgba(1,1,1, 0.5);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+
+  .linear-gradient span {
+    background: linear-gradient(to bottom, blue, grey);
+  }
+
+  #subtitle span
+  {
+
+      font-weight: normal;
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+  }
+
+
+
+  .element
+  {
+
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0);
+      border: white 1px solid;
+      font-size: large;
+      height: auto;
+      padding: 10px;
+  }
+
+
+  a
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  a:hover
+  {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+  }
+
+  /* a:visited
+  {
+      color:black;
+      text-decoration: none;
+  } */
+
+  a:active
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  .mainwrapper
+  {
+    width: 80%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .formulairecontact
+  {
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    bottom: 50px;
+    width: 50%;
+    text-align: center;
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+}
+
+
+@media screen and (max-width: 600px)
+
+{
+  .flexwrapper
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+  footer
+  {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    font-size: 60%;
+  }
+
+  footer a
+  {
+    color: white;
+  }
+
+  footer a:hover
+  {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  @font-face {
+      font-family: 'alex_brushregular';
+      src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+           url('alexbrush-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+
+  body
+  {
+      background-color: grey;
+      /* background-image: url("https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"); */
+  }
+
+  h1
+  {
+    font-family: 'alex_brushregular';
+  }
+
+
+  h1, h2
+  {
+      text-align: center;
+      color: white;
+  }
+
+
+  #photo_cv
+  {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    width: 25%;
+  }
+
+  nav
+  {
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: rgba(1,1,1, 0.5);
+      padding: 5px;
+
+  }
+
+  .nom_poste
+  {
+    background-color: rgba(1,1,1, 0.5);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+
+  .linear-gradient span {
+    background: linear-gradient(to bottom, blue, grey);
+  }
+
+  #subtitle span
+  {
+
+      font-weight: normal;
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+  }
+
+
+
+  .element
+  {
+
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0);
+      border: white 1px solid;
+      font-size: large;
+      height: auto;
+      padding: 10px;
+  }
+
+
+  a
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  a:hover
+  {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+  }
+
+  /* a:visited
+  {
+      color:black;
+      text-decoration: none;
+  } */
+
+  a:active
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  .mainwrapper
+  {
+    width: 60%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .formulairecontact
+  {
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    bottom: 50px;
+    width: 50%;
+    text-align: center;
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+}
