@@ -591,6 +591,127 @@
 
     </ul>
 
+    <h2>Déclarer des variables</h2>
+    <ul>
+        <li>Utilisation de let + nom de la variable = valeur de la variable, anciennement var</li>
+        <li>Opérations possibles sur les variables : +, -, +=, -=, *, /, =/ =*...</li>
+        <li>Constantes : const nom de la constante = valeur de la constante</li>
+        <li>On peut concaténer des chaines de caractère</li>
+        <li>Il existe plusieurs types de variables : string, number et les booleens</li>
+        <li>chaque fois que c4est possible, il vaut mieux faire des calculs avec des valeurs entieres</li>
+        <li>Javascript est un langage à typage faible : on peut réassigner des types à des variables déjå existantes</li>
+        <li>Pour créer un objet :</li>
+        <ul>
+        <li>let + nom de l'objet + = { attribut : clef}</li>
+        <li>Pour accéder aux données d'un objet on utilise le . </li>
+        <li> On peut aussi accéder avec la notation bracket : entre crochets puis dans les crochets des guillemets</li>
+        <li>Pour creer une classe on fait class le nom de la classe ouvrir les accolades puis constructor(arguments) puis ouvrir les accolades puis this.attribut = valeur</li>
+        <li>Les tableaux se créent avec des crochets et plusieurs éléments séparés par des virgules dans les crochets</li>
+        <li>Pour accéder aux éléments on va utiliser des crochets avec la position de l'élément</li>
+        <li>Avec les variables on passe des valeurs, avec les tableaux et les objets on passe des références, il faut faire attention à ça</li>
+        <li>Pour compter les éléments : length</li>
+        <li>Pour ajouter des éléments : push</li>
+        <li>Pour ajouter au début : unshift</li>
+        <li>Pour supprimer le dernier élément : pop()</li>
+        <li>On peut déclarer des variables sans les initialiser !!!</li>
+        </ul>
+    </ul>
+
+    <h2>L'avantage de Javascript : les nombreux environnements</h2>
+    <ul>
+        <li>On peut programmer en Javascript dans de nombreux environnements : JSBin, les pages web et les serveurs</li>
+        <li>Pour afficher une valeur dans la console : console.log(valeur)</li>
+        <li>L'ordre dans lequel le code apparaît a une importance</li>
+        <li>JSBIN est un outil pour tester des extraits de code</li>
+        <li>Pour importer le fichier JS dans la page HTML on utilise script src="adresse du script et on referme la balise"</li>
+        <li>Le code javascript peut aussi être écrit dans des serveurs (qui gèrent par exemple les mails reçus dans une BDD)</li>
+        <li>Les serveurs sont actifs à tout moment mais seuls certains éléments de code sont actifs à certains moments : les environnements comme Node permettent cela</li>
+    </ul>
+
+    <h2>Les instructions conditionnelles</h2>
+    <ul>
+        <li>On utilise des booleans : if (monBoolean){} else {}</li>
+        <li>On peut utiliser des instructions de comparaison : <, <=, ==, >=, >, !=</li>
+        <li>elif en Python vs else if en JS</li>
+        <li>Comment manipuler du HTML en JS ? </li>
+    </ul>
+
+
+
+
+    <h2>Affecter une page HTML avec du JS</h2>
+    <ul>
+        <li>Pour déclencher du code lors du clic sur un bouton on utilise button.addEventListener('click', la fonction que l'on déclenche)</li>
+        <li>D'abord il faut accéder aux éléments du HTML avec document.getElementById("element") : le mettre dans une constante</li>
+        <li>Ensuite on définit et appelle des fonctions</li>
+        <li>Pour affecter le texte d'une page HTML on va utiliser const.getElementById puis on l'appelle à nouveau avec InnerHTML</li>
+        <li>On utilise alert pour afficher un pop up sur la page</li>
+        <li>On utilise InnerHTML pour afficher un message dans un champ déjà déclaré</li>
+    </ul>
+
+<h3>Les égalités</h3>
+<ul>
+    <li>les égalités en JS peuvent être simples ou strictes</li>
+    <li>Les égalités simples comparent seulement la valeur</li>
+    <li>Les égalités strictes comparent aussi le type</li>
+    <li>Pareil pour la non égalité. != vs !==.</li>
+    <li>On utilise && pour vérifier si deux consitions sont toutes les deux vraies</li>
+    <li>On utilise || pour vérifier si aau moins une condition est vraie</li>
+    <li>On utilise le ! pour vérifier si une des conditions n'est pas vraie</li>
+    <li>Pour vérifier si une checkbox est cochée on accède déjà à la valeur avec getElementByID puis on vérifie si ele est cochée avec checked</li>
+    <li>Pour appeler les fonctions il faut au moins mettre les parenthèses. On peut les mettre sans arguments mais elles doivent être là.</li>
+    <li>Ne pas oublier le point virgule</li>
+    <li>Pour comparer plusieurs conditions on utilise les parentheses sur l'ensemble des conditions</li>
+    <li>Voir les différences entre var et let dans le lien enregistré</li>
+
+</ul>
+
+<h3>Les blocs de variables</h3>
+
+<ul>
+    <li>En javascript, les variables ne peuvent être utilisées que dans le même bloc dans lequel elles sont crées</li>
+    <li>Un bloc de code est délimité entre les accolades seulement</li>
+    <li>Si on veut accéder à une variable en dehors des accolades cela renverra undefined</li>
+    <li>Pour accéder à une variable à l'extérieur d'un bloc il faut déclarer la variable avant puis la modifier dans le bloc</li>
+    <li>instruction switch : modifier la valeur d'une variable en fonction de la valeur des variables</li>
+    <li>on utilise switch(lavariable){
+        case : "la valeur": ce qu'il se passe
+    }</li>
+    <li>à la fin d'un case il faut toujours mettre un break pour interrompre l'exécution du code ou un default pour qu;un code par défaut s'exécute</li>
+    <li>Les switches permettent de rendre plus efficace la lecture du code qu'avec des if/else</li>
+</ul>
+
+<h2>Les boucles</h2>
+
+<ul>
+    <li>Si on sait d'avance le nombre d'itérations que l'on va faire, il faut utiliser une boucle for</li>
+    <li>for (initialisation ; jusqu'à ; incrément) ouvrir l'accolade puis ce qu'il se passe à l'intérieur</li>
+    <li>Premiere commande : initialisation de la variable</li>
+    <li>Deuxieme commande : condition de poursuite de la boucle</li>
+    <li>Derniere commande : des qu'elle est fausse la boucle s'arrete</li>
+    <li>troisieme commande : incrementation</li>
+    <li>Javascript exécute toute la boucle avant d'en sortir et exécuter le code en dehors</li>
+    <li>On peut parcourir un tableau avec for et la condition de maintien est d'être inférieur `a length du tableau`</li>
+    <li>En utilisant le mot clef in : la boucle fait tout le travail d'itération à notre place</li>
+    <li>En utilisant of : On ne se soucie pas de l'indice, on reçoit chaque élément dans l'ordre</li>
+    <li>in : traite des indices et of </li>
+    <li>La derniere est encore plus utile si on traite par exemple d'objets et de tableaux</li>
+    <li>Les boucles for fonctionnent pour un nombre délimité d'interactions</li>
+    <li>Si on ne connait ps le nombre d;iterations à l'avance, on peut utiliser while</li>
+    <li>La boucle zhile vérifie simplement si la condition est vraie : si elle est vraie elle se poursuit, sinon elle s'arrete</li>
+</ul>
+
+<h2>Les erreurs</h2>
+<ul>
+    Les erreurs en javascript sont de trois typess:
+    <li>Les erreurs de syntaxe</li>
+    <li>les erreurs de logique</li>
+</ul>
+
+
+
+
+
 </ul>
 
 
