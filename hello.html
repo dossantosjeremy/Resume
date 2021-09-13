@@ -710,15 +710,104 @@
     <li>Une façon classique de traiter l'erreur est avec des if/else : on gère l'erreurd dans le else</li>
     <li>On peut aussi essayer avec try/catch : try : le code susceptible à l'erreur et catch pour attraper l'erreur du code et la réaction qui s'en suis</li>
     <li>Il faut mettre des breaks à la fin de chaque cas</li>
+    <li>Les valeurs dont la fonction a besoin : paramètres de la fonction</li>
+    <li>Les valeurs mises dans la fonction lors de l'appel : les arguments de la fonction</li>
+    <li>La fonction donne ensuite une valeur de retour : le résultat</li>
 </ul>
 
 
+<h2>Travail sur des fonctions</h2>
 
-
+<ul>
+  <li>Un fonction : bloc de code qui effectue une tâche précise</li>
+  <li>Si on a besoin de ce code : on appelle la fonction</li>
+  <li>Quand on crée une fonction, on liste les données dont elle a besoin : les arguments</li>
+  <li>Dans certaines conditions, la fonction retourne une valeur</li>
+  <li>console.log() : fonction qui permet d'afficher du code sur la console</li>
+  <li>Pour créer des fonctions : function + le nom de la fonction (les arguments de la fonction) { chaque ligne se terminant par un point virgule }</li>
+  <li>Pour parcourir un tableau, on utilise of (pour avoir les valeurs directement) ou in (pour avoir des indexes)</li>
 
 </ul>
 
+<h2>Les méthodes d'instance</h2>
+<ul>
+  <li>Les méthodes d'instance sont des fonctions que l'on définit à l'intérieur de chaque classe et qui opèrent à l'intérieur de l'instance de chaque classe</li>
+  <li>Ces méthodes n'agissent que dans le contexte de l'instance de la classe qui les contient</li>
+  <li>Attribut ou propriété : variable interne à la classe que l'on peut définir par défaut</li>
+  <li>Pour déclarer une méthode on utilise le nom et () puis on ouvre l'accolade, le code avec le point virgule et on ferme l'accolade.</li>
+  <li>On utilise le mot clef this pour accéder à l'instance en question</li>
+  <li>Il ne faut pas oublier de nommer les paramètres des fonctions lors de la déclaration ou les arguments lors de l'appel</li>
+</ul>
 
+<ul>
+  <li>Les méthodes statiques sont reliées à la classe elle-même</li>
+  <li>On les utilise pour créer des méthodes utilitaires</li>
+  <li>On s'en sert comme boîte à outils de fonctions</li>
+  <li>Pour la classe qui possède une méthode statique, il n'est pas nécessaire d'y ajouter un constructeur</li>
+  <li>L'avantage d'utiliser des méthodes statiques est de pouvoir les regrouper par catégorie</li>
+</ul>
+
+<h2>Comment écrire du code propre</h2>
+<ul>
+  <li>Si on réécrit plusieurs fois le même code : il faudrait surement refactoriser la fonction</li>
+  <li>Refactorisation : modification de la structure d'un élément de code sans changer le comportement</li>
+  <li>Si le code se répète, c'est bien d'en faire une fonction</li>
+  <li>DRY (dont repeat yourself) : principe de programmation qui réduit la répétition du code</li>
+<li>C'est mieux si les fonctions sont conçues pour ne faire qu'une seule chose et avec un nom bien précis</li>
+<li>Les fonctions doivent être petites et avoir un nom qui explique clairement ce qu'elles font</li>
+<li>Il faut bien commenter le code, de façon intelligente, pas trop et pas pas assez non plus</li>
+<li>Les noms de variables sont écrits en camel case minuscules et les noms de classe sont écrits en camel case majuscule</li>
+<li>C'est une convention de nommage</li>
+<li>Les noms clairs et descriptifs de variables et fonctions sont plus faciles à lire que des noms raccourcis</li>
+<li>Il faut aussi mettre le code en forme : les mises en retrait (tabulations, espace), les espacements</li>
+<li>Pour rendre le code plus lisible on peut sauter des lignes</li>
+</ul>
+
+<h2>Comment tester des fonctions</h2>
+<ul>
+  <li>Le test unitaire : permet de vérifier des fonctions, ou des classes en fournissant des éléments en entrée et en s'assurant qu'ils fournissent les éléments en sortie</li>
+  <li>On utilise console.error au lieu de console>.log pour faire afficher des messages comme des erreurs sur la console</li>
+  <li>On peut faire des tests simples avec des entrées connues et voir comment sont les sorties</li>
+  <li>On peut aussi mettre en place des architectures de test</li>
+  <li>Les tests unitaires ont une syntaxe spécfiique et constituent entre 60 et 80% de l'ensemble des tests de projets Javascript</li>
+  <li>Les tests d'intégration permettent de vérifier que les fonctions et les classes travaillent ensemble et fonctionnen bien entre elles</li>
+  <li>Les tests fonctionnels ou de bout en bout permettent de vérifier des scénarios complets en contexte.</li>
+  <li>Il existe des frameworks pour passer des tests unitaires : Jasmine, mocha.js, Mocha, etc.</li>
+  <li>Après une bonne compréhension de Javascript : faire le cours : Testez l'interface de votre site.</li>
+</ul>
+
+<h2>Comment déboguer du code</h2>
+<ul>
+  <li>On peut utiliser console.log() pour afficher ce qu'il se passe dans la console afin de débuguer le code</li>
+  <li>On peut utiliser les points d'arrêt pas à pas dans les navigateurs</li>
+  <li>Quand le navigateur arrive sur un point d'arrêt il met l'exécution en pause, qui permet de parcourir l'exécution ligne après ligne et vérifier les valeurs à chaque étape</li>
+  <li>Certains environnement de développement intégrés comportent un débogueur qui permet de tout déboguer dans l'espace de travail</li>
+  <li>Si rien ne fonctionne, il faut tenter d'expliquer le code à voix haute</li>
+  <li>La console : pour les erreurs simples et isolées</li>
+  <li>Les outils pour développeurs : la façon fiable de déboguer du code</li>
+</ul>
+
+<h2>La récursivité</h2>
+
+<ul>
+  <li>Chaque nouvelle instance d'une fonction se répète et s'appelle elle-même jusqu'à atteindre l'objectif souhaité</li>
+  <li>La récursivité : une fonction qui s'appelle elle-même plusieurs fois</li>
+  <li>Pour ré-appeler la fonction on utilise return avec la fonction, en changeant la valeur des arguments</li>
+  <li>Si ce que l'on recherche n'existe pas, il faut créer un cas de base qui permet à la fonction de s'arrêter</li>
+  <li>Si la fonction n'a pas de cas de base, elle peut créer des boucles infinies.</li>
+</ul>
+
+<ul>
+  <li>Exemple de la fonction factorielle : on la rappelle ensuite, ce qui est donc bien une fonction récursive</li>
+</ul>
+
+<h2>Les exercices souvent demandés en entretien d'embauche</h2>
+<ul>
+  <li>La recherche binaire</li>
+  <li>Merge sort</li>
+  <li>Index sort</li>
+  <li>Tree transversal</li>
+</ul>
 
 <p><a href="#titreprincipal">back to top</a></p>
 
