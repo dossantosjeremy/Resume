@@ -809,6 +809,7 @@
   <li>Tree transversal</li>
 </ul>
 
+<<<<<<< Updated upstream
 <h3>Comprendre ce qu'est le dom</h3>
 <ul>
     <li>Modèle d'objets du document qui représente la page HTML</li>
@@ -879,6 +880,45 @@
 <h3>Supprimer et remplacer des éléments</h3>
 <ul>
     <li>on utilise removeChild et replaceChild pour respectivement supprimer et remplacer des éléments</li>
+=======
+<h1>Cours : Ecrivez du JavaScript pour le Web</h1>
+<h2>Comprendre ce que veut dire le DOM</h2>
+
+<ul>
+  <li>Le DOM est une interface de programmation qui représente le HTML d'une page web et qui permet d'accéder aux éléments de la page web et de les modifier avec du JavaScript</li>
+  <li>Il faut voir le DOM comme un arbre où chaque élément peut avoir zéro ou plusieurs enfants</li>
+  <li>On commence par un élément racine : la page HTML et on progresse vers les autres balises : head, body, header/footer/main...</li>
+  <img src="https://user.oc-static.com/upload/2021/04/20/1618926723843_1c1_arbre-DOM.png" alt="le DOM">
+  <li>Avec le dom, on va pouvoir</li>
+  <ul>
+    <li>Modifier du contenu d'un élément précis</li>
+    <li>Modifier le style d'un élément</li>
+    <li>Créer ou supprimer des éléments</li>
+    <li>Interagir avec les utilisateurs</li>
+  </ul>
+</ul>
+
+<h2>Accéder aux éléments du dom</h2>
+<ul>
+  <li>Le document est le point de départ du dom</li>
+  <li>document.getElementById permet de retrouver un élément précis du DOM</li>
+  <li>On peut aussi retrouver un élément par nom de classe : document.getElementByClassName()</li>
+  <li>Cette dernière méthode recherche la classe des éléments et retourne la liste de tous les éléments qui correspondent</li>
+  <li>Pour retrouver un élément particulier, il faut le chercher dans le tableau, avec l'index en question.</li>
+  <li>On peut aussi chercher des éléments par nom de balise bien précis (tous les liens, tous les boutons...) : getElementByTagName</li>
+  <li>document.querySelector() : permet de faire une recherche plus complexe dans le document en mélangeant plusieurs procédés</li>
+  <li>On peut par exemple récupérer dans un élément d'une classe un autre élément d'une autre classe qui contient un enfant direct.</li>
+  <li>La formule pour cela est document.querySelector('#myId p.article > a')</li>
+  <li>querySelector() permet de retourner directement le premier élément qui correspond à la recherche</li>
+  <li>querySelector prend en paramètre le sélecteur en question.</li>
+  <li>Pour retourner une liste de résultats qui correspondent à la recherche, il faudra utiliser querySelectorAll</li>
+  <li></li>
+</ul>
+
+<ul>
+  <li>Il est aussi possible de parcourir les éléments et le parent de chaque élément</li>
+  <li>On utilise pour cela document.getElementById d'abord et ensuite elt.children, elt.parent, elt.nextElementSibling et elt.previousElementSibling</li>
+>>>>>>> Stashed changes
 </ul>
 
 <p><a href="#titreprincipal">back to top</a></p>
