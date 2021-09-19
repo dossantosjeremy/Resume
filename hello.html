@@ -809,6 +809,78 @@
   <li>Tree transversal</li>
 </ul>
 
+<h3>Comprendre ce qu'est le dom</h3>
+<ul>
+    <li>Modèle d'objets du document qui représente la page HTML</li>
+    <li>Le DOM est un arbre où chaque élément peut avoir 0 ou plusieurs enfants</li>
+    <li>L'élément racine est la balise HTML</li>
+    <li>Elle a pour enfants les balises head et body</li>
+    <li>Ensuite dans body on trouvera le contenu de la page : header, footer, main, article et sidebar</li>
+
+</ul>
+
+
+<h3>Les différentes façons d'accéder aux éléments du DOM</h3>
+<ul>
+    <li>document.getElementById</li>
+    <li>document.getElementsByClassName() et ensuite contents[indice du contenu auquel on cherche à accéder]</li>
+    <li>document.getElementsbyTagName() (en fonction des balises), ensuite on indique quel élément on veut accéder</li>
+    <li>document.querySelector() qui peret de faire une recherche complexe dans le DOM</li>
+</ul>
+
+<h3>Les recherches depuis un élément</h3>
+<ul>
+    <li>Ensuite on peut rechercher depuis un élément en particulier</li>
+    <li>element.children : propriété qui retourne la liste des enfants de l'élément</li>
+    <li>element.parentElement : retourne l'élément parent</li>
+    <li>element.nextElementSibling / element.previousElementSibling : permet de naviguer vers l'élément suivant / précédent</li>
+</ul>
+
+<h3>Comment modifier le contenu d'un élément</h3>
+<ul>
+    <li>deux propriétés permettent de modifier le contenu d'un élément : innerHTML et textContent</li>
+    <li>innerHTML : requière de rentrer du texte en HTML (avec des balises par exemple)</li>
+    <li>textContent : ne requière pas d'avoir des balises HTML</li>
+    <li>En utilisant innerHTML ou textContent on remplace directement le contenu de l'élément</li>
+    <li>avec innerHTML on peut même ajouter des balises HTML dans le texte que l'on ajoute</li>
+</ul>
+
+<h3>Modification de classes</h3>
+<ul>
+    <li>On peut accéder à la liste des classes d'un élément avec la propriété classList</li>
+    <li>add(string, [string]) : permet d'ajouter les classes spécifiées</li>
+    <li>remove (stringm [string,...]) permet de supprimer la ou les classes spécifiées</li>
+    <li>contains : permet de vérifier si la classe spécifiée est contenue par cet élément</li>
+    <li>replace(old, new) : permet de remplacer la classe</li>
+</ul>
+
+<h3>Changer les styles d'un élément</h3>
+<ul>
+    <li>avec la propriété stylem on peut récupérer et modifier les styles d'un élément</li>
+    <li>style est un objet qui a une propriété pour chaque style existant</li>
+
+</ul>
+
+<h3>Modifier les attributs d'un élément</h3>
+<ul>
+    <li>On peut changer les attributs d'un élément avec la fonction setAttribute(name, value)</li>
+    <li>La fonction setAttribute fonctionne pour par exemple name, type, etc. </li>
+    <li>getAttribute permet de récupérer la valeur de l'attribut en question</li>
+    <li>On peut utiliser removeAttribute pour supprimer complètement l'attribut</li>
+</ul>
+
+<h3>Créer de nouveaux éléments</h3>
+<ul>
+    <li>On peut créer de nouveaux éléments avec document.createElement("div") (par exemple)</li>
+    <li>Pour que l'élément soit visible il faut qu'il soit l'enfant d'un élément existant</li>
+    <li>Pour l'ajouter en tant qu'enfant on va utiliser appendChild(lenouvelélément)</li>
+</ul>
+
+<h3>Supprimer et remplacer des éléments</h3>
+<ul>
+    <li>on utilise removeChild et replaceChild pour respectivement supprimer et remplacer des éléments</li>
+</ul>
+
 <p><a href="#titreprincipal">back to top</a></p>
 
 </html>
