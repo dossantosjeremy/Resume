@@ -1028,6 +1028,24 @@
   <li>fetch(url).then(function(res){if(res.ok){return res.json();}}).then(function(value){console.log(value);}).catch(function(err){});</li>
 </ul>
 
+<h3>Valider des données saisies par un utilisateur</h3>
+
+<ul>
+  <li>on utilise e.target.value pour avoir accès à la valeur de l'input</li>
+  <li>onChange : code HTML / change : code Javascript</li>
+  <li>onInput : code HTML / input : code JS</li>
+  <li>value.startsWith : voir si la valeur commence par un certain caractère;
+  <li>Utilisation de regex pour faire une validation complexe</li>
+  <li>On peut mettre la validation directement dans l'HTML</li>
+  <li>Attribut type en HTML : permet d'empêcher la soumission si élément incorrect</li>
+  <ul>
+    <li>min/max : nombre ou date</li>
+    <li>required : rend obligatoire le remplissage de champ</li>
+    <li>step : permet de définir la valeur d'incrément</li>
+    <li>minlength/maxlenght : nombre de caractères maximum               </li>
+  </ul>
+</ul>
+
 
 </body>
 
