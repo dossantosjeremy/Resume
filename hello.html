@@ -13,10 +13,6 @@
 
 <h1 id="titreprincipal">Cours HTML et CSS sur OpenClassrooms</h1>
 
-<figure>
-    <img src="https://media2.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp?cid=ecf05e47be77efxvypu5lsvip6umo7n34tndo2psnph9lfko&rid=giphy.webp&ct=g" alt="chat qui apprend à coder" title="Moi quand j'apprends les langages HTML et CSS"/>
-    <figcaption> Moi quand j'apprends les langages html et css</figcaption>
-</figure>
 
 <h2>Structure du fichier:</h2>
 <ul>
@@ -33,7 +29,7 @@
   <li>DOCTYPE</li> : indispensable car c'est elle qui indique qu'il s'agit d'une page html
   <li>html</li> : balise principale qui englobe tout le code
   <li>head</li> : informations générales pour l'ordinateur (titre, encodage...)
-  <li>meta charset utf8</li> : indique comment les caractères spéciaux vont s'afficher. BIen veiller à enregister le fichier en UTF8
+  <li>meta charset utf8</li> : indique comment les caractères spéciaux vont s'afficher. Bien veiller à enregister le fichier en UTF8
   <li>Titre</li> : le titre de la page
   <li>body</li> : contenu principal
   <li>en écrivant html dans Atom et en cliquant sur entrée, il nous génère un template</li>
@@ -41,141 +37,127 @@
 
 <h2 id="balises">Les différentes balises</h2>
 <ul>
-  <li>p, balise par paire, permet de délimiter les paragraphes</li>
-  <li>On utilise la balise orpheline br pour aller à la ligne</li>
-  <li>Pour faire un saut de plusieurs lignes, on utilisera le CSS plutôt
-    que de mettre plusieurs br à la suite</li>
-  <li>On utilisera les balises de h1 à h6 pour les différents niveaux de titre</li>
-  <li>Il faut toujours respecter l'arborescence des titres : pas de titres secondaires
-  sans un titre principal</li>
-  <li>On pourra modifier l'apparence des titres avec le CSS</li>
+  <li>Balises orphelines : insérer quelque chose</li>
+  <li>Balises ouvrantes et fermantes : délimiter quelque chose</li>
+  <li>p : paragraphe</li>
+  <li>br : aller à la ligne</li>
+  <li>Saut de plusieurs lignes : utiliser le CSS</li>
+  <li>h1 - h6 : niveaux de titres</li>
+  <li>Respecter l'arborescence des titres</li>
+  <li>Modifier l'apparence des titres avec le CSS</li>
+  <li>span : balise invisible pour rester sur la même ligne</li>
+  <li>div : balise invisible en allant à la ligne</li>
 </ul>
 <h3 id="importance">Indiquer qu'un élément est important</h3>
   <ul>
-    <li>On utilise em pour mettre UN PEU en valeur : par défaut il met en italique</li>
-    <li>On utilise STRONG pour mettre beaucoup en valeur : par défaut il met en gras</li>
-    <li>mark permet de faire ressortir visuellement une portion de texte : par defaut il surligne</li>
+    <li>em : mettre un peu en valeur</li>
+    <li>strong : mettre beaucoup en valeur</li>
+    <li>mark : fait ressortir visuellement une zone de texte</li>
   </ul>
 <h3 id="listes">Créer des listes</h3>
 <ul>
-  <li>ul permet de créer des listes non ordonnées et à l'intérieur on mettra li pour chaque item</li>
-  <li>pour imbriquer une liste dans une autre liste, on réutilise un ul à l'intérieur d'un li</li>
-  <li>On utilisera <strong>ol</strong> pour une liste ordonnée et on gardera <strong>li</strong> pour les différents items</li>
-  <li>On peut aussi utiliser <strong>dl, dt et dd</strong> pour les listes de définition</li>
+  <li>ul : listes non ordonnées</li>
+  <li>imbriquer une liste dans une liste : ul dans un li</li>
+  <li>ol : listes ordonnées</li>
+  <li>dl, dt et dd : les listes de définitions</li>
 </ul>
 
-<h3 id="liens">les liens</h3>
+<h3 id="liens">Les liens</h3>
 <ul>
-  <li>pour insérer des liens, on utilisera <strong>a avec href="l'adresse du site"</strong></li>
-  <li>si on écrit un lien vers une adresse qui a des caractères bizarres, il faudra remplacer les & par des &amp</li>
-  <li>si on veut appeler un fichier html du même répertoire, il suffit de mettre le nom.html</li>
-  <li>si le fichier est placé dans un autre dossier, alors il faut mettre le nom du dossier avant avec /</li>
-  <li>si le fichier est dans un dossier parent, on ajoute ..</li>
-  <li>Pour rediriger vers une autre partie du site, on placera un id dans la balise vers laquelle rediriger puis on mettra #id de la balise dans le lien en question</li>
-  <li>l'attribut <strong>id</strong> sert à donner un nom unique à une balise, pour s'en servir de repère, il est utile pour repérer une balise en css</li>
-  <li>On peut combiner la redirection vers une autre page et une autre région de la page avec id et #</li>
-  <li>on utilisera title pour fournir une aide lorsqu'on survole un lien</li>
-  <li>On utilisera target="_blank" pour forcer l'ouverture dans un nouvel onglet</li>
-  <li>on utilisera href=mailto:votrenom@bidule.com pour créer un lien qui envoie un email</li>
-  <li>pour télécharger un fichier (zip par exemple) on inclue simplement le nom du fichier</li>
+  <li> &lt;a href="lien"&gt; &lt;/a&gt; : insérer un lien </li>
+  <li>Caractères spéciaux : remplacer par &amp</li>
+  <li>Fichier HTML du même répertoire : l'appeler directement</li>
+  <li>Si dans un autre dossier : mettre le nom du dossier</li>
+  <li>Dossier parent : ..</li>
+  <li>Redirection vers autre partie du site : #</li>
+  <li>id : unique dans le document</li>
+  <li>Combinaison redirection vers autre page et lien au sein d'une page</li>
+  <li>title : fournir une aide quand on survole un lien
+  <li>"target = _blank" : force l'ouverture dans un autre onglet</li>
+  <li>href=mailto:votrenom@bidule.com : envoie un e-mail</li>
+  <li>téléchargement d'un fichier zip : indiquer le chemin directement</li>
 </ul>
 
-    </body>
 
-<h2>Insérer des images</h2>
+<h3>Insérer des images</h3>
 <ul>
-    <li>Pour insérer des images, on utilise la balise orpheline &lt/img src="le chemin où se trouve l'image" alt="le texte qui va remplacer l'image si elle ne s'affiche pas"> </li>
-    <li>Ne pas oublier de mettre les images à l'intérieur d'un paragraphe</li>
-    <li>ne pas mettre d'espaces dans le nom de l'image au risque qu'il soit mal lu</li>
-    <li>on peut ajouter une infobulle avec la balise title</li>
-    <li>On peut afficher l'image en plus petite et l'entourer par un lien qui en cliquant redirigera vers l'image plus grande</li>
-    <li>On peut aussi entourer une image de figure pour l'integrer dedans</li>
-    <li>si on choisit de mettre l'image dans figure on peut aussi ajouter une figcaption en tant que legende</li>
-    <li>si on place l'image dans une figure, elle peut être située à l'extérieur d'un paragraphe</li>
+    <li>&lt/img src=" " alt="Texte de remplacement" title="infobulle"> : Insérer une image </li>
+    <li>Images : à mettre dans un paragraphe</li>
+    <li>Pas d'espaces dans le nom de l'image</li>
+    <li>Afficher l'image plus petite et l'entourer d'un lien pour rediriger vers une plus grande</li>
+    <li>Possible d'entourer l'image de figure</li>
+    <li>figcaption (en-dessous de figure : ajouter une légende)</li>
+    <li>Image apporte une information : figure</li>
     <li>Si l'image apporte une information, il faut la placer dans une figure</li>
-    <li>si l'image n'apporte aucune information, il faut la placer dans le paragraphe</li>
-    <li>la balise figure indique à l'ordinateur que l'image a un sens et qu'elle permet de mieux comprendre le texte</li>
+    <li>Image n'apporte aucune information : paragraphe</li>
 </ul>
 
-<h2>les figures</h2>
+<h3>les figures</h3>
 <ul>
-    <li>tout ce qui vient entourer le texte est une figure : images, codes sources, citations... </li>
+    <li>Figure : tout ce qui entoure le texte (images, codes sources, citations...) </li>
 </ul>
 
 <!-- un commentaire -->
 
-<h2 id="conseils">Conseils généraux</h2>
+<h3 id="conseils">Conseils généraux</h3>
 
 <ul>
   <li>Toujours vérifier que le site est vu correctement sur tous les navigateurs</li>
-  <li>Le célèbre site caniuse.com tient à jour une liste des fonctionnalités
+  <li>caniuse.com tient à jour une liste des fonctionnalités
   prises en charge par les différentes versions de chaque navigateur (figure suivante).</li>
-  <li>les balises orphelines servent à insérer quelque chose.
-  En général on met un / à la fin d'une balise orpheline</li>
-  <li>Les attributs viennent compléter les balises par des valeurs.</li>
+  <li>Les attributs viennent compléter les balises par des valeurs</li>
   <li>on peut par exemple indiquer le nom du fichier image.jpg</li>
   <li>balise attribut="valeur" /balise</li>
-  <li>les balises ouvrantes et fermantes servent à délimiter quelque chose</li>
-  <li>Ils viennent après le nom de la première balise ouvrante</li>
-  <li>On distingue les balises en paires et les balises orphelines</li>
 
 </ul>
 <p></p>
 
 <h2>Le CSS</h2>
 <ul>
-    <li>Le CSS signifie Cascasing Style Sheet</li>
+    <li>CSS : Cascading Style Sheet</li>
     <li>Police, taille du texte, bordures, fond... </li>
     <li>Il permet aussi de faire la mise en page du site</li>
-    <li>On peut écrire du code css de trois façons différentes</li>
-    <li>
+    <li>3 façons d'écrire du CSS</li>
         <ul>
-            <li>Dans l'en-tiete head</li>
-            <li>dans un fichier css séparé</li>
-            <li>dans les balises elles-même avec l'attribut style</li>
-            <li>Pour indiquer qu'il y a un fichier css il faut l'indiquer avec &ltlink rel="stylesheet" href="style.css" /></li>
-            <li>Pour mettre le code css dans l'en-tete il faut mettre une balise style</li>
-            <li>On peut aussi directement mettre le code dans les balises avec l'attribut style</li>
-            <li>le langage css se compose de plusieurs parties :</li>
-            <ul>
-                <li>le nom des balises : par exemple p, h1...</li>
-                <li>l'attribut: par exemple color, font-size...</li>
-                <li>les valeurs: pour chaque propriété, on peut indiquer une valeur</li>
-                <li>On peut mettre autant de propriétés, ou attributs que l'on veut à l'intérieur des accolades</li>
-                <li>Chaque propriété est suivie des deux points, puis de la valeur et des points virgule. </li>
-                <li>Pour définir une couleur avec un code hexadecimal on doit mettre un diese avant</li>
-                <li>Pour appeler une classe on doit mettre un point en css</li>
-                <li>Pour déclarer une classe dans le html il faut mettre class="nom de la classe"</li>
-                <li>Si on veut appliquer un code à plusieurs balises, il faut les séparer d'une virgule</li>
-                <li>Les commentaires dans le css se passent de la meme facon que dans le html</li>
-                <li>On peut utiliser soit class= soit id=</li>
-                <li>Pour la classe on l'identifiera par un point dans le css, et pour l'id par un #</li>
-                <li>Pour identifier une balise et rester au sein de la même ligne on utilisera span</li>
-                <li>Pour identifier une balise mais sauter une ligne on utilisera div</li>
-                <li>Pour sélectionner des éléments de la page à modifier, on utilise des sélecteurs</li>
-                <li>le selecteur universel est *</li>
-                <li>Pour sélectionner toutes les balises à l'intérieur d'une autre on ne les sépare pas par une virgule</li>
-                <li>Pour changer une police on utilise font-family</li>
-                <li>balise + balise : désigne la balise qui suit immédiatement la première</li>
-                <li>balise[attribut] sélectionne toutes les balises qui possèdent l'attribut en question, par exemple title</li>
-                <li>balise[attribut*=valeur] l'attribut doit posséder la valeur en question, peu importe sa position<li>
+            <li>En-tête head</li>
+            <li>Fichier CSS séparé</li>
+            <li>Balises avec attribut style</li>
+            <li>Code : &ltlink rel="stylesheet" href="style.css" /></li>
 
+            <li>Parties du langage CSS :</li>
+            <ul>
+                <li>Nom des balises : p, h1...</li>
+                <li>Attribut: color, font-size...</li>
+                <li>Valeurs : pour chaque propriété</li>
+                <li>Couleur en hexadécimal : # avant</li>
+                <li>.class</li>
+                <li>#id</li>
+                <li>En HTML : class="nom de la classe"</li>
+                <li>balise1, balise2 : applique le code à plusieurs balises</li>
+
+                <li>* : sélecteur universel</li>
+                <li>Balise1 Balise2 : balise2 à l'intérieur de balise1</li>
+                <li>font-family: changement de police</li>
+                <li>balise + balise2 : balise2 suit immédiatement balise</li>
+                <li>balise[attribut] toutes les balises qui ont attribut</li>
+                <li>balise[attribut*=valeur] : l'attribut possède une valeur en question
             </ul>
         </ul>
 </ul>
-    <h2>Le formatage de texte en CSS</h2>
+
+    <h3>Formatage du texte</h3>
     <ul>
-        <li>Pour indiquer une taille de texte on utilise font-size</li>
-        <li>La taille indiquée peut être relative (em, ex) ou absolue</li>
-        <li>On peut aussi l'indiquer avec une taille relative: xx-small, x-small, small, medium, large, x-large, xx-large</li>
-        <li>Si on indique avec des em, 1 est la taille normale, au-dessus de 1 on agrandit et en-dessous de 1 on rétrécit</li>
-        <li>Pour modifier la police on utilise font-family</li>
-        <li>Pour les polices, si on en metplusieurs séparées par des virgules, le navigateur essaiera chacune d'entre elles les unes après les autres.</li>
-        <li>En général, on indique Sérif en tout dernier qui correspond à une police par défaut</li>
-        <li>Les polices qui fonctionnent bien dans la plupart des navigateurs sont :
+        <li>font-size: taille du texte</li>
+        <li>em, ex : taille absolue</li>
+        <li>Taille relative: xx-small, x-small, small, medium, large, x-large, xx-large</li>
+        <li>em : 1=taille normale, &lt1 : taille rétrécie, >1 : taille agrandie</li>
+        <li>font-family: modification de la police</li>
+        <li>Mettre plusieurs polices séparées par des virgules pour que le navigateur essaie toutes les polices</li>
+        <li>Par défaut : Sérif</li>
+        <li>Polices qui fonctionnent dans les navigateurs :
             <ul>
                 <li>Arial</li>
-                <li>Arial Blacj</li>
+                <li>Arial Black</li>
                 <li>Comic Sans MS</li>
                 <li>Courrier Nez</li>
                 <li>Georgia</li>
@@ -185,51 +167,50 @@
                 <li>Times New Roman</li>
             </ul>
         </li>
-        <li>Si la police contient des espaces il faut entourer le nom de la police de guillemets</li>
-        <li>Si on utilise @font-face, on peut intégrer une police téléchargée (l'utilisateur devra alors la télécharger sur son navigateur pour qu'elle fonctionne)</li>
-        <li>Il faut la déclarer avec font face puis à l'intérieur font-family et src: url('mapolice.eot')</li>
-        <li>Les différents formats: tts, eot, otf, svg, woff</li>
-        <li>Pour mettre en italique, il y a plusieurs valeurs : italique, oblique ou normal</li>
+        <li>Police avec espaces : entourer par des guillements</li>
+        <li>@font-face: police customisée</li>
+        <li>font-face puis à l'intérieur font-family et src: url('mapolice.eot')</li>
+        <li>Formats de police: tts, eot, otf, svg, woff</li>
+        <li>text-decoration: italique, oblique ou normal</li>
         <li>Pour mettre en gras : font-weight avec bold ou normal</li>
-        <li>Pour souligner, barrer etc. on utilise text-decoration : underline, line-through, overline, none</li>
-        <li>on utilise text-align pour aligner le texte : left, center, right, justified...</li>
-        <li>on ne peut modifier l'alignement uniquement avec les balises de type block</li>
-        <li>On peut utiliser float pour faire flotter une image ou une figure autour d'autres balises</li>
-        <li>On utilise clear au niveau d'une autre balise pour indiquer qu'on arrête de faire flotter le texte autour</li>
+        <li>text-decoration : underline, line-through, overline, none</li>
+        <li>text-align: left, center, right, justified...</li>
+        <li>Modification d'alignement: balises BLOCK uniquement</li>
+        <li>Float: flotter une image ou figure autour du texte</li>
+        <li>clear : à la prochaine balise pour arrêter de faire flotter le texte</li>
     </ul>
 
 <h2>La couleur en CSS</h2>
 <ul>
-    <li>Pour indiquer la couleur, on utiliser color</li>
-    <li>elle peut alors etre indiquee avec un nom de couleur générique</li>
-    <li>Pour utiliser la notation hexadecimale il faut précéder la notation d'un diese</li>
-    <li>Pur indiquer la couleur de fond, on utilise la propriété background-color</li>
-    <li>en css, si on applique un style à une balise, toutes les balises à l'intérieur héritent de cette dernière (c'est l'héritage)</li>
-    <li>mark permet à la base de mettre certains mots en valeur</li>
-    <li>On peut appliquer background color à des endroits particuliers de la page comme certains paragraphes ou même des mots</li>
-    <li>c'est la propriété de l'élément le plus précis qui a la priorité</li>
-    <li>la propriété qui permet de changer une image de fond est background-image: url('le nom de l'image placée dans le même dossier)</li>
-    <li>l'adresse considérée : l'image doit être dans le même dossier que le fichier css</li>
-    <li>background-attachment permet de soit fixer le fond (fixed) soit permettre au texte de scroller par dessus (scroll)</li>
-    <li>par défaut l'image de fond se répète en mosaique, mais on peut changer ça</li>
-    <li>
+    <li>Couleur : color</li>
+    <li>Notation générique possible</li>
+    <li>Notation hexadécimale : faire précéder d'un dièse</li>
+    <li>Background-color : changement couleur de fond</li>
+    <li>Balises à l'intérieur héritent du CSS</li>
+    <li>Mark : mettre du texte en valeur</li>
+    <li>background-color : applicable sur plusieurs balises et même du texte seul
+    <li>Elément le plus précis qui a la priorité</li>
+    <li>background-image: url('le nom de l'image placée dans le même dossier) : permet de changer l'image de fond</li>
+    <li>l'image doit être dans le même dossier que le fichier css</li>
+    <li>background-attachment : fixer le fond (fixed) ou permettre au texte de scroller par dessus (scroll)</li>
+    <li>Par défaut : image de fond se répète en mosaique (on peut le changer)</li>
         <ul>
             <li>no-repeat : le fond ne se répète pas</li>
             <li>repeat-x: le fond se répète horizontalement</li>
             <li>repeat-y : le fond se répète verticalement</li>
             <li>repeat: le fond se répète dans une mosaique</li>
         </ul>
-    </li>
-    <li>Pour changer la position de l'image il faut indiquer background-position et le combiner avec nackground-repeat: no-repeat</li>
-    <li>background-position prend deux valeurs en pixels : la distance par rapport à la marge de gauche et par rapport à la marge du haut</li>
-    <li>On peut aussi utiliser les valeurs top, bottom, center, left, right</li>
-    <li>On peut combiner toutes les propriétés que l'on a assignées dans une super propriété qui est background avec toutes les propriétés sans virgule</li>
-    <li>L'ordre des valeurs n'a alors pas d'importance</li>
-    <li>On peut redimensionner les images avec height et width</li>
-    <li>ne pas oublier float et ensuite clear après le float</li>
-    <li>le css permet de jouer sur la transparence en utilisant opacity : on utilise des valeurs entre 0 (complètement transparent) et 1 (complètement opaque)</li>
-    <li>On peut aussi utiliser la notation rgba(r, g, b, a) avec a indiquant le niveau d'opacité</li>
+    <li>background-position, combiné avec background-repeat:no-repeat : change la position de l'image</li>
+    <li>background-position : deux valeurs en pixels - la distance par rapport à la marge de gauche et par rapport à la marge du haut</li>
+    <li>background-position : possible d'utiliser top, bottom, center, left, right</li>
+    <li>On peut combiner toutes les propriétés que l'on a assignées dans une super propriété qui est background avec toutes les propriétés, sans virgule</li>
+    <li>Height, Width: redimensionnement d'images</li>
+    <li>opacity : 0 (complètement transparent) et 1 (complètement opaque)</li>
+    <li>notation rgba(r, g, b, a) avec a indiquant le niveau d'opacité</li>
 </ul>
+
+
+<h1>REPRENDRE ICI</h1>
 
 <h2>Appliquer des bordures et des ombres</h2>
 <ul>
@@ -567,6 +548,9 @@
     <li>Pour modifier la largeur du viewport du navigateur mobile, on peut insérer une balise meta dans l'en-tête head : meta name="viewport" content="width=device-width" pour éviter d'avoir un zoom</li>
   </ul>
 </ul>
+
+
+<h2>JavaScript?</h2>
 
 <h2>Aller plus loin</h2>
 
@@ -1045,6 +1029,7 @@
 </ul>
 
 
+</body>
 
 
 <p><a href="#titreprincipal">back to top</a></p>
