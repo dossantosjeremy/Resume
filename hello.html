@@ -918,8 +918,134 @@
 <ul>
   <li>Il est aussi possible de parcourir les éléments et le parent de chaque élément</li>
   <li>On utilise pour cela document.getElementById d'abord et ensuite elt.children, elt.parent, elt.nextElementSibling et elt.previousElementSibling</li>
->>>>>>> Stashed changes
 </ul>
+
+<h2>Modifier le contenu d'éléments</h2>
+
+<ul>
+  <li>Modification contenu éléments du DOM : innerHTML / textContent</li>
+  <li>textContent : interprète ce qu'on lui donne comme du texte</li>
+  <li>innerHTML : permet d'y ajouter du code HTML</li>
+  <li>classList : accès aux classes d'un élément</li>
+  <li>add(string, [string, ...]) : ajoute la ou les classes spécifiées</li>
+  <li>remove(string, [string...] : supprime la ou les classes spécifiées)</li>
+  <li>contains(string) : vérifie si la classe spécifiée est contenue par cet élément</li>
+  <li>replace (old, new) : remplace l'ancienne classe par la nouvelle classe</li>
+</ul>
+
+<h3>Changer les styles d'un élément</h3>
+<ul>
+  <li>elt.style.color = "couleur" / elt.style.backgroundColor = ""; elt.style.fontWeight="";</li>
+</ul>
+
+<h3>Modifier les attributs</h3>
+<ul>
+  <li>elt.setAttribute("type", "password") / elt.setAttribute("name", "mypassword")</li>
+  <li>elt.getAttribute("name")</li>
+</ul>
+
+<h3>Créer de nouveaux éléments</h3>
+
+<ul>
+  <li>Pour véritablement créer un nouvel élément, il faut l'ajouter en tant qu'enfant à un élément existant</li>
+  <li>const newElt = document.createElement("div")</li>
+  <li>const elt = document.getElementById("main")</li>
+  <li>elt.appendChild(newElt);</li>
+</ul>
+
+<h3>Supprimer des éléments</h3>
+
+<ul>
+  <li>elt.removeChild(newElt);</li>
+  <li>elt.replaceChild(document.createElement("article"), newElt);</li>
+</ul>
+
+<h3>Ecouter les événements</h3>
+
+<ul>
+  <li>Evénement = nom et fonction callback</li>
+  <li>Un événement par défaut se propage : de l'élément en question jusqu'à l'élément parent et racine</li>
+  <li>Pour réagir au clic d'un événement, il faut écouter l'événement</li>
+  <li>addEventListener : nom de l'événement à écouter et fonction à appeler</li>
+  <li>addEventListener(event, callback)</li>
+  <li>C'est nous qui choisissons ce que l'on veut faire dans la fonction callback</li>
+  <li>elt.addEventListener('click', function() {});</li>
+  <li>Utiliser preventDefault() pour éviter le comportement par défaut de l'élément (lien, bouton de soumission de formulaire...)</li>
+  <li>Avec stopPropagation(), on peut empêcher que d'autres éléments reçoivent l'événement</li>
+  <li>element.addEventListener('click', function(event) { event.preventDefault()});</li>
+  <li>element.addEventListener('click', function(event) { event.stopPropagation()});</li>
+</ul>
+
+<h3>Récupérer des données utilisateur avec des événements</h3>
+<ul>
+  <li>Chaque événement implémente l'objet Event</li>
+  <li>Chaque événément a au minimum les mêmes fonctions et propriétés que l'objet Event</li>
+  <li>preventDefault(): empêche le comportement par défaut de l'élément</li>
+  <li>stopPropagation() : empêche la propagation de l'événement vers d'autres événements</li>
+  <li>mousemove : écouter le mouement de la souris</li>
+  <li>event.clientX/clientY : position de la souris dans les coordonnées locales</li>
+  <li>offsetX / offsetY : position de la souris par rapport à l'élément sur l'équelles on écoute l'événement</li>
+  <li>pageX/pageY : position de la souris par rapport au document entier</li>
+  <li>screenX/screenY : position de la souris par rapport à la fenêtre du navigateur</li>
+  <li>movementX / movementY : position de la souris par rapport au dernier élément mousemove</li>
+</ul>
+
+<h3>Lire le contenu d'un champ de texte</h3>
+<ul>
+  <li>change peut être utilisé pour détecter quand un utilisateur passe à autre chose lorsqu'il édite son texte</li>
+  <li>Cet événement fonctionne aussi pour les checkbox et les radio</li>
+  <li>Pour récupérer la valeur du champ modifié, il faut accéder à la valeur de l'élément cible : event.target</li>
+  <li>Ce type d'élément contient une propriété value qui permet de récupérer la valeur du champ</li>
+  <li>On peut remplacer change par input pour déclencher dès que l'utilisateur change une lettre du texte</li>
+  <li>On écoute le texte tapé avec input et on l'applique directement avec textContent</li>
+  <li>Il faut mettre en paramètre de fonction l'objet en cours de modification (avant .target.value)</li>
+  <li>Pour afficher la position de la souris il faut mettre event dans fonction et ensuite utiliser les attributs spécifiques décrits plus haut</li>
+</ul>
+
+<h3>Les API et les services WEB</h3>
+
+<ul>
+  <li>Service web : programme s'exécutant sur un serveur accessible depuis Internet et fournissant un service</li>
+  <li>API : ensemble des demandes que l'on peut faire à un service web</li>
+  <li>Des protocoles de communication : standardisation de la communication entre services faisant la même chose</li>
+  <li>Requêtes : données qui respectent le protocole de communication, renvoyées au serveur</li>
+  <li>Le protocole HTTP : permet de récupérer et sauvegarder les données d'un site web</li>
+  <li>Plusieurs informations se retrouvent dans une requête HTTP :</li>
+  <ul>
+    <li>Méthode</li>
+    <li>URL</li>
+    <li>Données</li>
+  </ul>
+  <li>GET : récupérer des ressources</li>
+  <li>POST : créer ou modifier une ressources</li>
+  <li>PUT : modifier une ressources</li>
+  <li>DELETE : supprimer une ressource</li>
+  <li>URL : adresse du service web que l'on veut atteindre</li>
+  <li>Données : les données que l'on veut transmettre au site web</li>
+  <li>Requête envoyée : le service web répond avec les informations suivantes:</li>
+  <ul>
+    <li>Données : données demandées</li>
+    <li>Code HTTP : code numérique qui indique comment s'est déroulé la requête</li>
+  </ul>
+</ul>
+
+<h3>Récupérer des données d'un site web</h3>
+
+<ul>
+  <li>Fetch : ensemble d'objets et de fonctions permettant d'exécuter des requêtes HTTP de manière asynchrone</li>
+  <li>Fetch permet d'exécuter des requêtes sans avoir besoin de recharger la page</li>
+  <li>fetch("adresseweb avec une api" : permet d'envoyer une requête HTTP de type GET au service web</li>
+  <li>Le format le plus courant pour recevoir les données : JSON</li>
+  <li>JSON : Javascript Object Notation</li>
+  <li>Json : propriétés doivent être écrites entre guillements</li>
+  <li>Javascript : l'objet est assigné à une variable. Json : on ne fait que décrire une structure</li>
+  <li>Utilisation d'une promise : exécuté quand le résultat sera obtenu.</li>
+  <li>Fonction catch : appelée si erreur survenue lors de la requete</li>
+  <li>fetch(url).then(function(res){if(res.ok){return res.json();}}).then(function(value){console.log(value);}).catch(function(err){});</li>
+</ul>
+
+
+
 
 <p><a href="#titreprincipal">back to top</a></p>
 
