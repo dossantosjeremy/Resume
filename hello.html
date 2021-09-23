@@ -209,55 +209,51 @@
     <li>notation rgba(r, g, b, a) avec a indiquant le niveau d'opacité</li>
 </ul>
 
-
-<h1>REPRENDRE ICI</h1>
-
 <h2>Appliquer des bordures et des ombres</h2>
 <ul>
-    <li>beaucoup de propriétés existent pour personnaliser les bordures: border-width, border-color, border-style...</li>
-    <li>on peut utiliser la superpropriété order et l'associer à 3 valeurs : color, width et style</li>
-    <li>La largeur s'indique avec une valeur en pixels</li>
-    <li>La couleur comme vu précédemment</li>
-    <li>le type de bordure, il y en a plusieurs</li>
-    <li>
-        <ul>
-            <li>none</li>
-            <li>solid : une bordure sous forme de trait continu</li>
-            <li>dashed : trait discontinu</li>
-            <li>dotted : des points</li>
-            <li>double : double bordure</li>
-            <li>groove : relief</li>
-            <li>ridge : autre effet relief</li>
-            <li>inset: effet 3d aui donne l'impression qu'on a cliqué dessus</li>
-            <li>outset : effet 3d global surrélevé</li>
-        </ul>
-    </li>
-    <li>Pour changer la bordure à différents endroits, on peut utiliser border-top, border-bottom, border-left, border-right</li>
-    <li>Pour arrondir la bordure on utilise border-radius avec une valeur associée</li>
-    <li>Pour préciser la valeur de l'arrondi dans chaque coin, il faut mettre 4 valeurs</li>
-    <li>On peut appliquer des ombres avec box-shadow</li>
-    <li>box-shadow prend plusieurs valeurs L le décalage horizontal de l'ombre, le décalage vertical, l'adoucissement du dégradé et la couleur</li>
-    <li>Pour que l'adoucissement soit élevé il faut mettre une valeur supérieure à celle du décalage</li>
-    <li>On peut aussi ajouter de l'ombre au texte directement avec text-shadow</li>
-    <li>On utilise a:hover pour changer l'apparence d'un lien lorqu'on le survole</li>
-    <li>avec hover on peut changer toutes les propriétés que l'on veut</li>
-    <li>On peut aussi changer l'apparence des paragraphes lorsque l'on clique dessus</li>
-    <li>active permet de changer l'apparence du lien uniquement lorsqu'on clique dessus</li>
-    <li>focus: sert lorsque l'élément est sélectionné. Sera utile lorsqu'on verra les formulaires</li>
-    <li>On peut changer l'apparence d'un lien déjà visité en utilisant a:visited. Si on veut qu'il garde une apparence normale, il faut lui mettre la meme apparence que par defaut</li>
+    <li>border : color, width et style </li>
+    <li>Width : valeur en pixel</li>
+    <li>Type de bordure :</li>
+    <ul>
+        <li>none</li>
+        <li>solid : une bordure sous forme de trait continu</li>
+        <li>dashed : trait discontinu</li>
+        <li>dotted : des points</li>
+        <li>double : double bordure</li>
+        <li>groove : relief</li>
+        <li>ridge : autre effet relief</li>
+        <li>inset: effet 3d aui donne l'impression qu'on a cliqué dessus</li>
+        <li>outset : effet 3d global surrélevé</li>
+    </ul>
+    <li>border-top, border-bottom, border-left, border-right</li>
+    <li>Arrondir: border-radius</li>
+    <li>Plusieurs valeurs pour préciser l'arrondi dans chaque coin</li>
+    <li>Ombres : box-shadow</li>
+    <li>Box-shadow : décalage horizontal, vertical, adoucissement et couleur</li>
+    <li>Adoucissement élevé : valeur supérieure à celle du décalage</li>
+    <li>Text-shadow : ombre ajoutée au texte</li>
+    <li>a:hover : changer l'apparence d'un lien au survol</li>
+    <li>Hover: il est possible de changer toutes les propriétés que l'on veut</li>
+    <li>Possible de changer l'apparence des paragraphes lorsque l'on clique dessus</li>
+    <li>Active : change l'apparence du lien lorsqu'on clique dessus</li>
+    <li>Focus : lorsque l'élément est sélectionné</li>
+    <li>a:visited : changer l'apparence d'un lien déjà visité. Si on veut la même apparence que par défaut, indiquer les mêmes paramètres</li>
 </ul>
 
 <h2>Mise en page de la page web</h2>
 <ul>
-    <li>en general, une page web contient un en-tête, une zone de navigation, un corps et un pied de page</li>
-    <li>header est l'en-tete du site : peut contenir un logo, une banière...</li>
+    <li>en-tête, une zone de navigation, un corps et pied de page</li>
+    <li>Header : logo, banière</li>
     <li>le header peut contenir tout ce qu'on veut : images, textes, liens...</li>
-    <li>on a aussi le footer dans lequel en général on retrouve les liens de contact et les informations sur la page</li>
-    <li>la balise nav permet de concentrer tous les liens de navigation au même endroit</li>
-    <li>La balise section permet de délimiter des sections sur le site</li>
-    <li>aside est utilisée pour noter des informations complémentaires sur le côté mais n'est pas obligatoire</li>
-    <li>article renvoie à une partie de la page qui pourrait être reprise sur une autre et qui est indépendante</li>
+    <li>Footer : contacts et informations sur la page</li>
+    <li>Nav: concentration des liens de navigation au même endroit</li>
+    <li>Section : délimitation de sections sur le site</li>
+    <li>aside : informations complémentaires sur le côté (pas obligatoire)</li>
+    <li>Article : partie de la page qui pourrait être reprise</li>
 </ul>
+
+
+REPRENDRE ICI
 
 <h2>Agencement avec des blocs</h2>
 <ul>
@@ -621,8 +617,6 @@
     </ul>
 
 
-
-
     <h2>Affecter une page HTML avec du JS</h2>
     <ul>
         <li>Pour déclencher du code lors du clic sur un bouton on utilise button.addEventListener('click', la fonction que l'on déclenche)</li>
@@ -973,6 +967,7 @@
   <li>pageX/pageY : position de la souris par rapport au document entier</li>
   <li>screenX/screenY : position de la souris par rapport à la fenêtre du navigateur</li>
   <li>movementX / movementY : position de la souris par rapport au dernier élément mousemove</li>
+
 </ul>
 
 <h3>Lire le contenu d'un champ de texte</h3>
@@ -1027,7 +1022,64 @@
   <li>Utilisation d'une promise : exécuté quand le résultat sera obtenu.</li>
   <li>Fonction catch : appelée si erreur survenue lors de la requete</li>
   <li>fetch(url).then(function(res){if(res.ok){return res.json();}}).then(function(value){console.log(value);}).catch(function(err){});</li>
+  <li>res.json ne permet pas de retourner directement l'objet : elle retourne une promise qui devra être résolue</li>
 </ul>
+
+
+<h3>Sauvegarder des données sur un site web</h3>
+<ul>
+  <li>GET : récupérer des données</li>
+  <li>POST : envoyer des données</li>
+  <li>PUT : recevoir des données</li>
+  <li>Avec POST et PUT, on ajoute simplement des données dans le corps de la requête.</li>
+  <li>Pour envoyer du JSON à un service WEB, il faut transformer le Javascript en JSON</li>
+  <li>Pour transformer, on utilise JSON.stringify(json)</li>
+  <li>Le header permet de dire au site qu'il va recevoir du JSON</li>
+  <li>method: "POST", headers : { 'content-type' : 'application/json', 'Accept' : 'application/json'}, body: JSON.stringify(jsonBody)</li>
+  <li>Tout ceci est envoyé dans le deuxième paramètre de la fonction : précise la méthode et le body (les données qu'on veut envoyer) et les headers (plus d'informations sur la requête)</li>
+  <li>fetch("http://url-service-web.com/api/users", {
+	method: “POST”,
+	headers: {
+'Accept': 'application/json',
+'Content-Type': 'application/json'
+},
+	body: JSON.stringify(jsonBody)
+});</li>
+</ul>
+
+<h3>Code pour envoyer et ensuite recevoir des données d'un site web</h3>
+
+<ul>
+  <li>Il faut utiliser les méthodes l'une après l'autre : d'abord POST, puis then</li>
+  <li>Réutiliser bêtement la syntaxe enseignée dans le cours</li>
+</ul>
+
+function send(e){
+  e.preventDefault();
+  fetch("https://mockbin.com/request", {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({value: document.getElementById("value").value})
+  }
+       )
+  .then(function(res) {
+    if (res.ok) {
+      return res.json();
+    }
+  })
+  .then(function(value) {
+      document
+        .getElementById("result")
+        .innerText = value.postData.text;
+  });
+}
+
+document
+  .getElementById("form")
+  .addEventListener("submit", send);
 
 <h3>Valider des données saisies par un utilisateur</h3>
 
@@ -1050,6 +1102,205 @@
   <li>Utilisation de e.target.value pour avoir accès aux infos du formulaire en temps réel</li>
   <li>Désactivation de bouton : disabled = true;</li>
   <li>Pour tester avec regex: regex.test(x.target.value)</li>
+</ul>
+
+<h3>Comprendre le fonctionnement asynchrone</h3>
+
+<ul>
+  <li>Javascript : ne peut faire qu'une chose à la fois. Pas deux codes en parallèle</li>
+  <li>Un code synchrone : un code qui s'exécute ligne à ligne en attendant la fin de l'exécution</li>
+  <li>Un code asynchrone : un code qui n'attend pas que le code ait fini son exécution</li>
+  <li>On peut faire de l'asynchrone avec ce qu'on appelle l'event loop</li>
+  <li>La fonction en question est placée dans une sorte de file d'attente qui exécute toutes les fonctions qu'elle contient</li>
+  <li>La fonction setTImeout : fonction à exécuter de manière asynchrone et le délai avant d'exécuter la fonction</li>
+  <li> setTimeout(function() {
+    console.log("I'm here!")
+}, 5000);
+
+console.log("Where are you?");</li>
+<li>D'autres méthodes moins répandues et moins utilisées</li>
+<li>setInterval(la fonction, le temps d'intervalle) : la fonction se répète en boucle</li>
+<li>setImmediate : prend en paramètre la fonction à exécuter de façon synchrone, qui sera placée en file d'attente mais passe devant toutes les autres fonctions</li>
+<li>I/O : événements correspondant à l'input et output</li>
+<li>Fetch est une fonction asynchrone : elle ne bloque pas l'exécution du code</li>
+<li>On utilise then et catch qui sont appelées plus tard quand le travail est terminé</li>
+</ul>
+
+<h3>Gérer du code asynchrone</h3>
+
+<ul>
+  <li>Callback : fonction que l'on définit</li>
+  <li>Callback : passage d'une fonction en paramètre d'une fonction asynchrone. Elle l'appelle quand elle a fini sa tâche.</li>
+  <li>Fonction passée à setTimeout : callback</li>
+  <li>Gérer l'erreur dans les callback : 2 paramètres (le premier est l'erreur, le deuxième est ce qu'on donne en paramètre)</li>
+
+fs.readFile(filepath, function(err, data){
+  if(err){
+    throw err;
+  }
+});
+
+<li>Si on travaille avec des promesses : </li>
+<li>.then si la promesse est remplie, .catch s'il y a une erreur</li>
+<li> On place des function dans le then et dans le catch, avec leurs paramètres</li>
+<li>On peut chaîner les promise</li>
+
+
+returnAPromiseWithNumber2()
+    .then(function(data) { // Data is 2
+        return data + 1;
+    })
+    .then(function(data) { // Data is 3
+        throw new Error('error');
+    })
+    .then(function(data) {
+        // Not executed
+    })
+    .catch(function(err) {
+        return 5;
+    })
+    .then(function(data) { // Data is 5
+        // Do something
+    });
+
+
+<li>on doit mettre async devant une fonction asynchrone pour l'appeler</li>
+<li>Quand on appelle la fonction on peut utiliser await pour dire que l'on attend que l'exécution se fasse</li>
+<li>Dans l'exercice pas de target value en fonction asynchrone avec une promise</li>
+
+</ul>
+
+<h3>Paralléliser plusieurs requêtes HTTP</h3>
+
+<ul>
+  <li>Pour lancer une fonction asynchrone après deux fonctions asynchrones, on utilise un compteur qui s'incrémente à chaque fois qu'une exécution de fonction asynchrone est terminée</li>
+  <li>On peut utiliser Promise.all pour exécuter toutes les Promise en parallèle et retourner une Promise qui sera résolue quand toutes les promises seront résolues</li>
+  <li>La fonction then reçoit toutes les résultats de toutes les promise sous forme de tableau</li>
+  <li>Pour exécuter la requête POST après toutes les requêtes GET, on l'exécute après le then</li>
+  <li>Promise.all permet d'exécuter des fonctions asynchrones en parallèle</li>
+  <li>On utilise await devant Promise.all pour attendre l'exécution des GET puis devant POST afin d'attendre le résultat</li>
+  <li>On utilise then pour récupérer tous les résultats</li>
+</ul>
+
+<h3>Optimiser le code</h3>
+
+<ul>
+  <li>linter : programme qui analyse notre code et détecte les erreurs de syntaxe, variables non utilisées, etc.</li>
+  <li>Des exemples de linter : JSLint, ESLint</li>
+  <li>Minifier : programme qui permet de minifier le code
+  <li>Essaie de rendre le code le plus léger possible en retirant les espaces, les retours à la ligne, renommer les variables avec des noms plus courts...</li>
+  <li>Exemples de minifiers : node-minify, uglify JS</li>
+  <li>Bundler : package le code pour qu'il tienne dans un seul fichier</li>
+  <li>On utilise un transpiler pour coder avec la dernière version de javascript tout en étant compatible avec tous les navigateurs</li>
+</ul>
+
+<h3>Gérer les dépendances liées au code</h3>
+
+<ul>
+  <li>NPM permet d'installer les modules précédents : gestionnaire de packages</li>
+  <li>NPM est présent dans Node.JS</li>
+  <li>npm nécessite package.json : permet d'avoir les informations sur un projet : nom, version, modules à installer...
+  </li>
+  <li>Pour installer un module on fait npm install module-name --save-dev : cela permet à NPM de sauvegarder cette dépendance dans le fichier package.json</li>
+  <li>--save permet d'ajouter la dépendance en tant que dépendance de production</li>
+</ul>
+
+<h3>Compiler le code</h3>
+
+<ul>
+  <li>webpack : bundler : compile et package le code en un seul fichier</li>
+  <li>webpack gère aussi les ressources (images, styles css, etc. avec des loaders)</li>
+  <li>On installe d'abord webpack : npm install webpack webpack-cli --save-dev</li>
+</ul>
+
+
+<h2>Les animations CSS</h2>
+
+
+<h3>Les transitions</h3>
+<ul>
+  <li>Pour créer une transition, il faut plusieurs éléments</li>
+  <ul>
+    <li>Une propriété CSS à modifier</li>
+    <li>La valeur initiale de la propriété CSS</li>
+    <li>La valeur finale de la propriété</li>
+    <li>Une durée</li>
+    <li>Un événement pour déclencher la transition</li>
+  </ul>
+  <li>Pour agrandir un bouton : on va utiliser scale()</li>
+  <li>On utilise le Sass : le SCSS ajoute des expressions, des fonctions, des variables, une logique conditionnelle et des boucles</li>
+  <li>transform(état1, état2, temps pour passer de l'état1 à l'état2</li>
+  <li>Il faut transformer le scss en css pour pouvoir le lire dans le navigateur</li>
+  <li>Pour cela, suivre un tuto sur internet pour le refaire</li>
+  <li>Deux moyens pour créer des animations : les transitions et les keyframe</li>
+  <li>Les keyframe permettent de créer des animations plus élaborées mais aussi plus complexes</li>
+  <li>Pour créer une transition : propriété css à modifier. Une valeur initiale pour la propriété CSS, une valeur finale, une durée et un événement pour déclencher la transition.</li>
+  <li>scale() : permet de modifier la taille d'un élément. </li>
+  <li>Si on veut qu'un élément change d'apparence à un certain moment seulement, on peut utiliser les pseudoclasses (:hover)</li>
+  <li>les pseudoclasses sont comme des if/else (&hover:)</li>
+  <li>Pour ajouter de la fluidité : on ajoute transition-property: transform</li>
+  <li>Les propriétés de transition : dans le sélecteur de départ, et non celui de fin</li>
+  <li>Durée exprimée en CSS : de plusieurs manières, secondes ou millisecondes</li>
+  <li>Propriété transform: permet de combiner plusieurs propriétés en une: le nom de la propriété, l'espace et la durée.</li>
+  <li>On applique la valeur initiale à l'élément qu'on veut modifier</li>
+  <li>La valeur finale dans la pseudoclasse</li>
+  <li>Une durée</li>
+  <li>La pseudoclasse pour déclencher l'animation</li>
+  <li>Voir le site de mozilla pour toutes les pseudoclasses</li>
+</ul>
+
+<h3>Les pseudoclasses</h3>
+
+<ul>
+  <li>La liste des pseudoclasses</li>
+  <ul>
+    <li>Hover</li>
+    <li>Active (lorsqu'un lien ou un bouton est cliqué par l'utilisateur)</li>
+    <li>focus : lorsqu'un élément reçoit le focus</li>
+    <li>valid: lorsque le contenu se valide par rapport au type de données attendu</li>
+    <li>invalid : lorsque la validation ne peut pas se faire par rapport au type de donnée attendue</li>
+    <li>not : permet de cibler les éléments qui ne sont pas représentés par l'argument en question</li>
+    <li>checked : inputs de type chckbox, option ou radiobutton qui sont cochés</li>
+    <li>enabled : élément avec lequel on peut interagir</li>
+    <li>Elément dont l'interaction est bloquée</li>
+  </ul>
+  <li>Les transitions peuvent aussi être déclenchées en javascript</li>
+  <li>Focus : donne un feedback immédiat à l'utilisateur lorsqu'il sélectionne l'input</li>
+  <li>pseudo-classe invalid : permet de dire que l'information entrée n'est pas valide</li>
+  <li>Pour attendre que l'utilisateur ait fini d'entrer son adresse e-mail on peut combiner not avec focus et invalid pour n'afficher une erreur que lorsque le focus se perd</li>
+  <li>S'applique si l'input n'est pas en état focus et si invalid est true</li>
+  <li>On peut faire en sorte que la transition de couleur soit progressive</li>
+  <li>Pour faire une transition : transition puis propriété puis temps puis pseudo classe puis résultat final</li>
+  <li>Pour transformer un élément voisin on peut utiliser le combinateur d'adjacence</li>
+</ul>
+
+<h3>Les 12 principes de l'animation de disney</h3>
+
+<ul>
+  <li>Aplatissement et élargissement d'un objet quand il ralentit et étirement quand il s'accélère
+  <li>Il faut une anticipation au mouvement pour préparer l'utilisateur</li>
+  <li>Attirer l'attention de l'utilisateur vers un endroit par le staging</li>
+  <li>Faire des animations d'un coup et partie par partie</li>
+  <li>Ajouter des vitesses différentes aux différentes parties d'un objet pour donner l'air vivant</li>
+  <li>Slow in slow out : les objets démarrent et s'arrêtent progressivement</li>
+  <li>Introduction d'arcs dans le mouvement d'un objet pour le rendre plus naturel</li>
+  <li>Ajouter des actions pour séparer différentes parties d'une scène</li>
+  <li>Timing : les objets doivent se déplacer de manière crédible par rapport à leur taille et leur masse</li>
+  <li>Exagération : donner plus de caractère et de personnalité à une animation</li>
+  <li>Donner du charisme à l'animation</li>
+</ul>
+
+<h3>Créer des animations naturelles</h3>
+
+<ul>
+  <li>On peut combiner les transitions</li>
+  <li>Par exemple combiner le grossissement et le changement de couleur</li>
+  <li>Mot-clef all : ajout des transitions sur toutes les propriétés que l'on a défini</li>
+  <li>trnasition : + la propriété que l'on souhaite faire transiter</li>
+  <li>Si on veut faire une transition de plusieurs propriétés en même temps, on utilisera des virgules</li>
+  <li>La propriété transition-delay retarde le début d'une animation par le temps que l'on indique</li>
+  <li>Il faut préciser la valeur pour chaque transition utilisée</li>
+  <li>Elle peut être précisée directement après la durée de la transition à la ligne, à la suite</li>
 </ul>
 
 
