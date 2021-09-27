@@ -1309,6 +1309,121 @@ returnAPromiseWithNumber2()
     <li>Un objet en mouvement doit accélérer et avant de s'arêter il doit décélérer</li>
     <li>accélération : ease-in. décélération : ease-out</li>
     <li>On utilise la fonction transition-timing-function pour régler la courbe d'accélération d'une transition</li>
+    <li>Si aucune fonction de transition n'est indiquée : ce sera la fonction ease qui sera utilisée</li>
+    <li>Parmi les mots clefs de fonction : ease-in, ease-out, ease-in-outm linear</li>
+    <li>Il est possible de créer ses propres courbes avec la fonction cubic-bézier et en allant sur le site</li>
+</ul>
+
+<h3>Optimiser le navigateur pour l'affichage d'animation</h3>
+
+<ul>
+    <li>Les animations sont une succession d'images. Le cerveau les considère comme du mouvement</li>
+    <li>On va voir comment le navigateur interprète le code CSS</li>
+    <li>Plus les frame per second sont élevées, plus les images apparaissent fluides</li>
+    <li>Pour déterminer le nombre d'images par secondes, on divise une seconde par la durée du calcul. </li>
+    <li>Le nombre idéal d'images par seconde est de 60.</li>
+    <li>60 fps est le taux d'images par secondes le plus fluide que l'utilisateur pourra voir</li>
+    <li>On doit donc s'assurer que le navigateur mette moins de 1/60 secondes pour que l'animation soit la plus fluide que possible.</li>
+    <li>Pour cela il faut suivre des bonnes pratiques dans la manière d'écrire les animations css</li>
+    <li>Le navigateur reçoit les éléments en provenance du document HTML et les affiche un à un.</li>
+    <li>Pour chaque élément, le navigateur cherche à l'associer au code css correspondant. </li>
+    <li>Ensuite, le navigateur détermine le layout : la taille des éléments et où les placer</li>
+    <li>Peinture : le navigateur transforme les éléments en pixels en utilisant les styles de l'étape 1 et les positions et dimensions de l'étape 2</li>
+    <li>Composition : le navigateur combine tous les éléments pour composer la page qui s'affiche alors</li>
+    <ul>
+        <li>1. Layout</li>
+        <li>2. Paint</li>
+        <li>3. Composition</li>
+    </ul>
+    <li>Pour éviter le jank (recalcul de toutes les propriétés en aval), il faut animer des propriétés qui ne déclenchent pas de recalcul de layout ou de paint</li>
+    <li>Il faut donc animer des propriétés qui font partie de l'étape composition : transform et opacity </li>
+    <li>Animations à privilégier : transform et opacity</li>
+    <li></li>
+
+</ul>
+
+<h3>Créer des animations fluides avec la propriété transform</h3>
+
+<ul>
+    <li>La propriété transform possède 20 fonctions différentes pour déplacerm pivoter, déformer et changer la taille</li>
+    <li>Pour affecter un élément voisin à celui considéré on utilise le simple + avec la classe en question</li>
+    <li>scale(x, y) : x=largeur et y=hauteur</li>
+    <li>Modification dans une seule direction: scaleX et scaleY</li>
+    <li>translate(x, y) (prend les valeurs en px, en em...) : permet de déplacer l'élément sur la page</li>
+    <li>translateX : déplacement uniquement sur l'axe des X. translateY : uniquement sur l'axe des Y.</li>
+    <li>transform ne peut pas agir sur des éléments inline. Ils doivent être block ou inline block</li>
+    <li>Pour masquer du texte qui ne rentrerait pas dans une div on utilise overflow hidden</li>
+    <li>Pour appliquer une rotation å un objet on utilise rotate</li>
+    <li>On peut exprimer la rotation en degrés ou en tours complets</li>
+    <li>On utilise & > pour appliquer du code css à un enfant dans un parent</li>
+    <li>On préfère turn quand l'élément fait au moins un tour sur lui-même et deg quand il fait moins d'un tour</li>
+    <li>On ne peut assigner qu'une seule propriété transform à un élément donné</li>
+    <li>Pour utiliser plusieurs fonctions avec transform il faut les lister une à une dans transform (sans virgule pour les séparer)</li>
+    <li>L'ordre dans lequel on écrit les fonctions a un impact sur l'efficacité car le navigateur les applique de droite à gauche</li>
+    <li>Peu importe l'ordre pour scale et rotate, mais l'ordre a une importance pour translate et scale par exemple</li>
+    <li>Se rappeler que les fonctions s'appliquent de la droite vers la gauche</li>
+    <li>skew : skewY, skewX, skew : faire pencher un élément</li>
+    <li>On peut utiliser translateZ, rotateZ, skewZ, scale Z ou les trois coordonnées dans chaque formule</li>
+    <li>perspective : permet de changer le point de vue de l'utilisateur</li>
+    <li>Pour appliquer une transformation d'échelle sur l'axe Z : d'abord translater la position sur l'axe Z afin de voir le mouvement</li>
+    <li>Pour garder en fluidité : n'animer que les propriétés de l'étape de composition : opacity et transform</li>
+</ul>
+
+
+<h3>chqnger le point d'ancrage d'un élément</h3>
+
+<ul>
+    <li>transform-origin: permet de déplacer un point d'ancrage</li>
+    <li>On peut déplacer le point d'ancrage au sommet d'un objet, vers une extrêmité</li>
+    <li>Pour cela on peut utiliser scaleX</li>
+    <li>On utilise transform-origin pour changer le point d'origine d'un élément. On peut le formuler en px ou en %</li>
+    <li>Axe X: à partir de la bordure gauche et axe Y: a partir du haut</li>
+    <li>Pour déplacer le point d'origine vers la gauche on formule: transform-origin: 0% 50%;</li>
+    <li>On peut utiliser les mots clefs left et right pour ancrer sur la gauche ou sur la droite au lieu de donner des pourcentages</li>
+    <li>On peut aussi utiliser top et bottom</li>
+    <li>Le mot clef center correspond à 50%</li>
+    <li>On peut utiliser simplement left et le navigateur comprend qu'il faut le placer à gauche</li>
+    <li>L'axe Z doit être défini obligatoirement avec des unités réelles (pixels, cm...)</li>
+</ul>
+
+
+<h3>Analyser la performance des animations</h3>
+
+<ul>
+    <li>Devtools permet de tester les animations sur des anciens smartphones</li>
+    <li>il faut aller sur l'onglet performance</li>
+    <li>On peut enregistrer ce qu'il se passe sur le site. En cochant la case screenshot on peut avoir des captures à chaque étape</li>
+    <li>On peut brider la puissance du processeur pour simuler des appareils plus lents</li>
+    <li>Il faut cliquer sur enregistrer et ensuite on peut rejouer l'animation</li>
+    <li>Si chaque image dans la timeline verte est proche de 60 fps, alors ce sera bien lu sur les devices plus anciens</li>
+    <li>La section main permet de voir tous les calculs qui ont permis d'animer une page web</li>
+    <li>Le violet: calculs de base de l'affichage d'une page web comme les styles et l'analyse du css</li>
+    <li>Le jaune : calcul du layout : c'est bien quand il n'apparait pas</li>
+    <li>La case verte: calcul de paint ou de composition</li>
+    <li>Chrome DevTools permet d'inspecter le code source d'une page, analyser les performances d'une page, brider la performance de la machine pour simuler un appareil plus lent</li>
+    <li>Pour cette dernière option, il faut activer CPU throttling</li>
+    <li>On peut utiliser l'onglet performance pour analyser les problèmes d'animation et de performance du code</li>
+
+</ul>
+
+<h3>Créer des animations de couleur avec la propriété opacity</h3>
+
+<ul>
+    <li>Il va falloir pour cela créer des éléments uniquement pour l'animation</li>
+    <li>background-color n'est pas une bonne propriété pour changer les couleurs des éléments.</li>
+    <li>Pour changer les couleurs des éléments, il vaut mieux utiliser opacity</li>
+    <li>opacity permet de changer la transparence d'un élément. À 0, on a une transparence totale. </li>
+    <li>Il faudrait structurer le bouton pour avoir deux arrières plans l'un sur l'autre</li>
+    <li>Pour éviter de déclencher un calcul trop lent sur le changement de couleur, il faut mettre une div dans le bouton, dans le css passer son z-index à -1 et faire en sorte que l'opacité passe à 1 lorsqu'on survole</li>
+    <li>Permet de n'avoir aucun calcul de paint dans ce cas</li>
+    <li>Il vaut mieux utiliser le pseudoélément ::after que de mettre des divs à chaque fois</li>
+    <li>Le pseudo élément before ou after crée un nouvel élément avant ou après, a chaque fois qu'un sélecteur a été assigné</li>
+    <li>Au lieu de créer une div que l'on place par-dessus et changer son opacité, on passe par le pseudo-élément before ou after</li>
+    <li>La propriété content est indispensable au fonctionnement des pseudoéléments</li>
+    <li>Car after injecte un élément dans la page après coup</li>
+    <li>Il est indispensable d'assigner quelque chose au travers de content, même une chaine de caracteres vide</li>
+    <li>Les pseudo-éléments permettent d'éviter d'écrire du code répétitif</li>
+    <li>Les pseudo-éléments before ou after créent respectivement un élément qui est le premier ou dernier enfant de l'élément sélectionné</li>
 </ul>
 
 
