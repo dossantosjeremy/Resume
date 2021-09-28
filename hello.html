@@ -1309,6 +1309,15 @@ returnAPromiseWithNumber2()
     <li>Un objet en mouvement doit accélérer et avant de s'arêter il doit décélérer</li>
     <li>accélération : ease-in. décélération : ease-out</li>
     <li>On utilise la fonction transition-timing-function pour régler la courbe d'accélération d'une transition</li>
+    <li>La fonction linear a une animation dont le timing est linéaire</li>
+    <li>Application d'une fonction de timing linéaire à l'animation d'une boîte : transition-timing-function: linear</li>
+    <li>transition : transform 1000ms | transition-timing-function : linear.</li>
+    <li>Ou : transition: transform 1000ms linear</li>
+    <li>ease-out ralentit vers la fin et ease-in est plus lent au départ</li>
+    <li>Lorsqu'aucune fonction n'est précisée, par défaut le navigateur applique la fonction ease : accélération plus nette et décélération plus prononcée</li>
+    <li>Fonction cubic-bezier : fonctionne comme la fonction rgb : indique une liste de valeurs numériques</li>
+    <li>Les deuxi premières valeurs de la fonction : coordonnées du point qui déterminent le ease-in et les deux derniers le ease-out</li>
+    <li>On peut utiliser le site : cubic-bezier.com</li>
 </ul>
 
 
