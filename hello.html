@@ -1424,7 +1424,51 @@ returnAPromiseWithNumber2()
     <li>Il est indispensable d'assigner quelque chose au travers de content, même une chaine de caracteres vide</li>
     <li>Les pseudo-éléments permettent d'éviter d'écrire du code répétitif</li>
     <li>Les pseudo-éléments before ou after créent respectivement un élément qui est le premier ou dernier enfant de l'élément sélectionné</li>
+    <li>Voir le site css triggers pour voir à quelle étape du calcul se trouve chaque transformation</li>
 </ul>
+
+
+
+<h3>Animer avec des keyframes</h3>
+
+<ul>
+    <li>On peut utiliser des keyframes pour animer plus finement des éléments et faire des animations en boucle</li>
+    <li>Les keyframes permettent de créer des animations en plusieurs étapes : avec un comportement plus complexe et dynamique</li>
+    <li>keyframe : pourcentage d'animation complétée lorsque valeur réalisée</li>
+    <li>Les keyframes sont disponibles globalement: n'importe quel sélecteur peut les utiliser</li>
+    <li>On déclare les keyframes au niveau de base du fichier CSS en utilisant le descripteur @keyframes</li>
+    <li>Avec keyframes on déclare un ensemble de keyframes et on leur donne un nom et on peut l'appeler via ce nom</li>
+    <li>On définit une keyframe par keyframe + le nom de la keyframe + ouvrir les accolades puis 0% avec une valeur et 100% avec une autre valeur</li>
+    <li>Si n ne décompose pas le mouvement on peut remplacer 0 par from et 100 par to</li>
+    <li>On utilise animation-name et animation-duration. </li>
+    <li>Les propriétés et valeurs de chaque keyframe sont appliquées pendant toute la durée de l'animation</li>
+    <li>Les propriétés CSS des keyframes remplacent celles des sélecteurs auxquelles elles sont assignées</li>
+    <li>Il est possible de n'utiliser que "animation" avec le nom et la duree derriere</li>
+    <li>Une fonction de timing est appliquee par defaut a chaque keyframe</li>
+    <li>Si on ne précise aucune valeur dans la keyframe, que ce soit au début ou à la fin, c'est la valeur du sélecteur qui sera prise par défaut</li>
+    <li>On peut appliquer plusieurs pourcentages à chaque keyframe, séparés par des virgules. Le navigateur décide ensuite ce qu'il affiche</li>
+    <li>S'il y a des valeurs contradictoires dans les keyframes, c'est la valeur qui a été définie en dernier qui restera</li>
+    <li>Pour animer des choses voisines il faut que les div en question soient contenues dans le même div parent</li>
+    <li>Les keyframes permettent de définir lorsqu'on veut les lancer (chargement de la page, avec un délai...)</li>
+    <li>Les keyframes permettent de définir les états de début et de fin</li>
+    <li>Les keyframes lisent une série de valeurs définies. Les animations progressent jusqu'à ce qu'elles soient terminées ou interrompues  </li>
+    <li>Les transitions sont intrinsèauement liées à l'état d'un élément. </li>
+    <li>Les keyframes sont elles codées en dur. Elles ne nécessitent qu'un élément pour les déclencher.</li>
+    <li>Pour déclencher l'animation au lancement de la page il faut assigner la keyframe à l'élément directement</li>
+    <li>Avec animation-delay on peut faire en sorte que l'animation soit déclenchée avec un délai</li>
+    <li>Les keyframes retourneront toujours à l'état par défaut après la fin de l'animation</li>
+    <li>animation-fill-mode permet d'étendre les animations, au début, à la fin ou les deux : backwards, forwards ou both</li>
+    <li>Forwards revient à dire de mettre la fin de l'animation sur pause.</li>
+    <li>On peut indiquer la valeur de animation-fill-mode directement dans animation.</li>
+    <li>Chaque keyframe a une accélération et un ralentissement par défaut</li>
+    <li>On peut assigner une courbe d'accélération cubic-beziers en utilisant la propriété animation-timing-function</li>
+    <li>On peut ajouter cette propriété à la propriété animation</li>
+    <li>Le keyframe hérite par défaut de la fonction d'animation du sélecteurd dans lequel il est défini</li>
+</ul>
+
+
+
+
 
 
 </body>
