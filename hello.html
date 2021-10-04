@@ -14,6 +14,7 @@
 <h1 id="titreprincipal">Cours HTML et CSS sur OpenClassrooms</h1>
 
 
+
 <h2>Structure du fichier:</h2>
 <ul>
   <li><a href="#structure">Structure d'une page web</a></li>
@@ -22,6 +23,11 @@
   <li><a href="#liens">Les liens</a></li>
   <li><a href="#listes">Les listes</a></li>
   <li><a href="#conseils">Conseils en vrac</a></li>
+</ul>
+
+<h2>Conseils généraux</h2>
+<ul>
+  <li>On peut repositionner un container flex en absolute, mais il faut préciser sa largeur</li>
 </ul>
 
 <h2 id="structure">Structure de base d'une page HTML</h2>
@@ -1464,9 +1470,43 @@ returnAPromiseWithNumber2()
     <li>On peut assigner une courbe d'accélération cubic-beziers en utilisant la propriété animation-timing-function</li>
     <li>On peut ajouter cette propriété à la propriété animation</li>
     <li>Le keyframe hérite par défaut de la fonction d'animation du sélecteurd dans lequel il est défini</li>
+    <li>On peut dire au code qu'on veut jouer les keyframes indéfiniment, les rejouer, etc.</li>
+    <li>Pour dire qu'un champ de formulaire est mal renseigné par exemple on peut utiliser les animations css</li>
+    <li>Pour lancer une animation lorsqu'un champ n'est plus en focus : :not(:focus):invalid</li>
+    <li>Parfois il vaut mieux supprimer du code pour en créer un qui communique une meilleure émotion</li>
+    <li>On peut initier des variables dans le code CSS</li>
+    <li>Animation-iteration-count : permet de demander au navigateur de répéter les cycles d'animation autant de fois qu'on le veut</li>
+    <li>On peut directement intégrer animation-iteration-count dans la propriété aniamiton</li>
+    <li>animation-iteration-count: directement dans la propriété animation, en raccourci.</li>
 </ul>
 
+<h3>Manipuler et réutiliser les animations CSS</h3>
 
+<ul>
+  <li>On crée 5 barres de couleurs dans un container pour faire une animation de chargement</li>
+  <li>Si on applique une animation à toutes les barres d'un coup elles grandissent toutes en même temps</li>
+  <li>Ne pas oublier de créer des variables avec sass : beaucoup plus simple et facile pour réutiliser</li>
+  <li>Pour créer un décalage dans l'animation on pourrait répéter un délai sur chaque barre avec une valeur différente</li>
+  <li>Pour nommer une classe html on peut donner un nom de classe puis un nom de sous-classe séparés par un espace</li>
+  <li>Le mot backwards permet de faire débuter l'animation bien avant</li>
+  <li>Pour faire répéter une animation à l'infini : au lieu de mettre une durée spécifique, on précise "infinite"</li>
+  <li>Même si les valeurs de début et de fin de l'animation sont différentes, on peut utiliser animation-direction pour faire une boucle plus homogene</li>
+  <li>reverse permet de lire à l'envers</li>
+  <li>on choisit alternate pour la faire lire à l'endroit et à l'envers</li>
+  <li>Pour ajouter une animation en miroir on peut ne changer que le code html</li>
+  <li>animation-play-state : permet de mettre en pause ou jouer des animations</li>
+  <li>animation play state permet de controler la lecture des animations</li>
+  <li>La fonction random en css permet de générer un entier compris entre 1 et un nombre choisi qui dans ce cas est 100</li>
+
+</ul>
+
+<h3>En résumé</h3>
+
+<ul>
+  <li>Répéter un ensemble de keyframes : animation-iteration-count : nombre ou infinite</li>
+  <li>animation-direction : normal, reverse, alternate...</li>
+  <li>animation-play-stae : paused/running</li>
+</ul>
 
 
 
